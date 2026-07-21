@@ -1,0 +1,2 @@
+transmission_id,buoy_id,buoy_provider,sounder_datetime,start_depth_m,sounder_depth_interval_m,sounder_unit,sounder_values
+TXN-001,SLX+485094,SL,2025-08-01 18:34:00,0,10,index,0-0-0-0-0-0-0-0-0-1
