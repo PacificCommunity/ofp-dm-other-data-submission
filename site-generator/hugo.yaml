@@ -1,0 +1,23 @@
+baseURL: http://127.0.0.1:1314/
+locale: en-us
+title: OFP Data Submission
+contentDir: ../documents
+publishDir: public
+
+server:
+  host: 127.0.0.1
+  port: 1314
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+params:
+  theme:
+    default: light
+    displayToggle: true
+  navbar:
+    displayTitle: true
+    displayLogo: false
+  page:
+    width: full

@@ -1,0 +1,79 @@
+metadata:
+  version: '1.0'
+  description: Electronic Monitoring Longline set log data template
+section:
+  title: Set Log Data
+  intro: 'The set-log table captures timestamped events recorded during the setting and hauling of a fishing set.
+
+
+    Each row represents one EM set-log event and contains the parent trip and set identifiers, event type, event timestamp,
+    position, optional float identifier, and comments.'
+  notes: '- em_trip_id and em_set_id are CSV relationship fields. They must exactly match the corresponding identifiers in
+    the Trip and Set CSV files submitted in the same dataset.
+
+    - Datetime values must use ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.
+
+    - Latitude must use signed DDMM.MMM and longitude signed DDDMM.MMM, consistent with the EM Longline JSON standard.
+
+    - Leave the CSV cell blank where a value is unknown or not applicable.
+
+    - The Mandatory value indicates whether the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields,
+    based on whether a corresponding DCC and/or WCPFC field name is present in the EM Longline JSON standard. ''No'' does
+    not mean that the field should be omitted; non-minimum fields may still be required for CSV relationships, data quality
+    control, system integration, or national programme requirements.
+
+    - log_type must use one of the standard event codes defined for EM set logs: SS, FS, SE, HS, FH, or HE.'
+columns:
+  em_trip_id:
+    type: str
+    format: Text
+    description: Identifier of the parent EM trip. The value must exactly match an em_trip_id in the Trip CSV submitted in
+      the same dataset.
+    mandatory: false
+    example: OCEANVOYAGER20250315
+    csv_only: true
+  em_set_id:
+    type: str
+    format: Text
+    description: Identifier of the parent EM set. The value must exactly match an em_set_id in the Set CSV submitted in the
+      same dataset.
+    mandatory: false
+    example: OCEANVOYAGER2025031520250316194500
+    csv_only: true
+  log_type:
+    type: str
+    format: SS | FS | SE | HS | FH | HE
+    description: 'Code identifying the set-log event: SS = set start, FS = float deployed, SE = set end, HS = haul start,
+      FH = float haul, and HE = haul end.'
+    mandatory: false
+    example: SS
+  log_datetime:
+    type: datetime
+    format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
+    description: UTC date and time of the set-log event.
+    mandatory: false
+    example: '2025-03-16T19:45:00Z'
+  log_lat:
+    type: str
+    format: Signed DDMM.MMM
+    description: Latitude at the time of the set-log event.
+    mandatory: false
+    example: '-1518.240'
+  log_lon:
+    type: str
+    format: Signed DDDMM.MMM
+    description: Longitude at the time of the set-log event.
+    mandatory: false
+    example: '+17632.520'
+  float_id:
+    type: int
+    format: Integer
+    description: Incremental identifier assigned to a float during setting or hauling, where applicable.
+    mandatory: false
+    example: 1
+  comments:
+    type: str
+    format: Text
+    description: Comments or additional information about the set-log event.
+    mandatory: false
+    example: Start of setting. First radio buoy deployed in good weather conditions.
