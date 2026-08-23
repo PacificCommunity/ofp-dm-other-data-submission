@@ -8,21 +8,10 @@ section:
 
     Each row represents one EM set-log event and contains the parent trip and set identifiers, event type, event timestamp,
     position, optional float identifier, and comments.'
-  notes: '- em_trip_id and em_set_id are CSV relationship fields. They must exactly match the corresponding identifiers in
-    the Trip and Set CSV files submitted in the same dataset.
+  notes: |
+    - `em_trip_id` and `em_set_id` must exactly match the corresponding identifiers in the Trip and Set CSV files submitted in the same dataset.
 
-    - Datetime values must use ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.
-
-    - Latitude must use signed DDMM.MMM and longitude signed DDDMM.MMM, consistent with the EM Longline JSON standard.
-
-    - Leave the CSV cell blank where a value is unknown or not applicable.
-
-    - The Mandatory value indicates whether the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields,
-    based on whether a corresponding DCC and/or WCPFC field name is present in the EM Longline JSON standard. ''No'' does
-    not mean that the field should be omitted; non-minimum fields may still be required for CSV relationships, data quality
-    control, system integration, or national programme requirements.
-
-    - log_type must use one of the standard event codes defined for EM set logs: SS, FS, SE, HS, FH, or HE.'
+    - `log_type` must use one of the standard EM set log event codes: `SS` (set start), `FS` (float deployed), `SE` (set end), `HS` (haul start), `FH` (float haul), or `HE` (haul end).
 columns:
   em_trip_id:
     type: str

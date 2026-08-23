@@ -8,31 +8,16 @@ section:
 
     Each row represents one potential compliance event and records when and where the event occurred, what part of the EM
     record it relates to, the applicable compliance category and event codes, and analyst comments.'
-  notes: '- em_trip_id is a CSV relationship field and must exactly match an em_trip_id in the Trip CSV submitted in the same
-    dataset.
+  notes: |
+    - `em_trip_id` must exactly match an `em_trip_id` in the Trip CSV submitted in the same dataset.
 
-    - event_id must be unique within the submission.
+    - `event_id` must be unique within the submission.
 
-    - Datetime values must use ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.
+    - `event_relation` identifies whether the event relates to a Trip, Set, or Catch record. The corresponding `event_relation_id` must contain the applicable `em_trip_id`, `em_set_id`, or `em_catch_id`.
 
-    - Latitude must use signed DDMM.MMM and longitude signed DDDMM.MMM, consistent with the EM Longline JSON standard.
+    - `event_category_code` and `event_type_code` must use the standard codes in the [Potential Compliance Categories and Events reference table](/em/07_Potential_Compliance_categories_and_Events_reference_codes/).
 
-    - Leave the CSV cell blank where a value is unknown or not applicable.
-
-    - event_relation identifies whether the event relates to a Trip, Set, or Catch record.
-
-    - event_relation_id must contain the corresponding em_trip_id, em_set_id, or em_catch_id according to the value in event_relation.
-
-    - event_category_code and event_type_code must use the standard codes in the [Potential Compliance Categories and Events
-    reference table](/em/07_Potential_Compliance_categories_and_Events_reference_codes/).
-
-    - The Mandatory value indicates whether the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields,
-    based on whether a corresponding DCC and/or WCPFC field name is present in the EM Longline JSON standard. ''No'' does
-    not mean that the field should be omitted; non-minimum fields may still be required for CSV relationships, data quality
-    control, system integration, or national programme requirements.
-
-    - Summary Yes/No indicators for particular compliance issues do not need to be submitted as separate fields where they
-    can be derived from the structured compliance event records.'
+    - Compliance issues are reported through the structured event records; separate Yes/No summary fields are not required where the corresponding result can be derived from these records.
 columns:
   em_trip_id:
     type: str

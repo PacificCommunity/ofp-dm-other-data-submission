@@ -10,31 +10,16 @@ section:
 
     Each row represents one EM trip and contains vessel identifiers, trip timing and locations, EM programme metadata, and
     analysis/review attributes.'
-  notes: '- em_trip_id must be unique within a submission.
-
-    - Datetime values must use ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.
-
-    - Latitude must use signed DDMM.MMM and longitude signed DDDMM.MMM, consistent with the EM Longline JSON standard.
+  notes: |
+    - `em_trip_id` must be unique within a submission.
 
     - Percentage fields are expressed as values from 0 to 100.
 
-    - Boolean values are true or false; leave the CSV cell blank if the value is unknown or not applicable.
-
-    - List-type values must be represented as valid JSON arrays, for example ["NNT","RAO"] or [4,7].
-
-    - The Mandatory value indicates whether the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields,
-    based on whether a corresponding DCC and/or WCPFC field name is present in the EM Longline JSON standard. ''No'' does
-    not mean that the field should be omitted; non-minimum fields may still be required for CSV relationships, data quality
-    control, system integration, or national programme requirements.
-
-    - Vessel identification should be checked against the [WCPFC Record of Fishing Vessels](https://vessels.wcpfc.int/). If
-    the UVI/IMO number or WCPFC VID is not available, vessel name, flag State registration number and IRCS should be provided
-    to support unique vessel identification.
+    - Vessel identification should be checked against the [WCPFC Record of Fishing Vessels](https://vessels.wcpfc.int/). If the UVI/IMO number or WCPFC VID is not available, vessel name, flag State registration number and IRCS should be provided to support unique vessel identification.
 
     - Port codes should use the [Port codes reference table](/em/12_Port_codes/) where applicable.
 
-    - Refer to the [EM programme codes reference table](/em/08_EM_program_codes/) and [EM DRC codes reference table](/em/09_DRC_codes/)
-    for standard programme and review-centre codes.'
+    - Refer to the [EM programme codes reference table](/em/08_EM_program_codes/) and [EM DRC codes reference table](/em/09_DRC_codes/) for standard programme and review-centre codes.
 columns:
   em_trip_id:
     type: str

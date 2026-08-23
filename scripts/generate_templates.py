@@ -283,16 +283,6 @@ class TemplateGenerator:
         # Field descriptions table
         lines.append("#### Field descriptions")
         lines.append("")
-        lines.append(
-            "> **Mandatory:** `Yes` indicates that the field is part of the "
-            "WCPFC Interim Electronic Monitoring Minimum Data Fields, based on "
-            "the corresponding DCC and/or WCPFC field in the EM Longline JSON "
-            "standard. `No` means the field is supplementary to those minimum "
-            "fields; it does **not** mean the field should be omitted. A "
-            "non-minimum field may still be required for CSV relationships, "
-            "DQC validation, system integration, or national programme requirements."
-        )
-        lines.append("")
         lines.append("| Field name | Type | Format | Description | Mandatory |")
         lines.append("|------------|------|--------|-------------|-----------|")
 

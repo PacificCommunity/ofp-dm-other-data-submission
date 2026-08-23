@@ -27,7 +27,7 @@
 
 	<meta itemprop="name" content="OFP Data Submission">
 	<meta itemprop="description" content="EM Longline catch-level CSV template aligned to the JSON standard">
-	<meta itemprop="wordCount" content="5586">
+	<meta itemprop="wordCount" content="4501">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="OFP Data Submission">
 	<meta name="twitter:description" content="EM Longline catch-level CSV template aligned to the JSON standard">
@@ -499,7 +499,7 @@
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#csv-as-a-transition-to-json-submission">CSV as a transition to JSON submission
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#data-submission-workflow">Data submission workflow
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
@@ -594,21 +594,19 @@
           <h2>Electronic Monitoring (EM) Longline CSV Data Format<span class="hx:absolute hx:-mt-20" id="electronic-monitoring-em-longline-csv-data-format"></span>
     <a href="#electronic-monitoring-em-longline-csv-data-format" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Electronic Monitoring (EM) data provide detailed records of fishing operations and catch events derived from onboard video cameras, sensors, and EM analysis systems. These data are produced through a structured review process conducted by trained EM analysts and, in some cases, supported by automated or artificial intelligence tools.</p>
 <p>EM data capture information related to fishing activities, including trip metadata, gear deployment, catch events, species identification, and potential compliance observations. They support both <strong>scientific monitoring</strong> (for example, species composition, catch characterisation and fishing effort) and <strong>compliance monitoring</strong> (for example, mitigation measures, protected-species interactions and operational practices).</p>
-<p>The EM Longline CSV templates are aligned, wherever applicable, with the field names, definitions, formats, codes and field order used in the <strong>EM Longline JSON standard</strong>, which is itself aligned with the WCPFC Interim Electronic Monitoring Minimum Standards. The CSV format provides a practical tabular submission option for national EM programmes and data providers that are not yet producing the regional JSON structure directly.</p>
-<h3>CSV as a transition to JSON submission<span class="hx:absolute hx:-mt-20" id="csv-as-a-transition-to-json-submission"></span>
-    <a href="#csv-as-a-transition-to-json-submission" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The CSV templates are intended to support a gradual transition toward direct JSON submission. Data providers should therefore use the JSON-aligned field names, formats and reference codes defined in this specification when producing CSV data.</p>
-<p>The current data flow is:</p>
+<p>The EM Longline CSV templates provide a structured tabular format for submitting EM data to SPC/OFP. The templates incorporate the <a href="https://meetings.wcpfc.int/node/24512"target="_blank" rel="noopener">WCPFC Interim Electronic Monitoring Minimum Data Fields</a>, together with additional fields required to support regional data management and submission processes. Field names, definitions, formats, codes and field order are aligned, where applicable, with the <a href="https://pacificcommunity.github.io/tufman2-json-standard/longline-em/"target="_blank" rel="noopener">EM Longline JSON standard</a>. This alignment provides consistency between the CSV and JSON submission formats and supports future transition to direct JSON submission.</p>
+<h3>Data submission workflow<span class="hx:absolute hx:-mt-20" id="data-submission-workflow"></span>
+    <a href="#data-submission-workflow" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The CSV format is intended for national EM programmes and data providers that currently produce tabular data. The submitted data follow this workflow:</p>
 <ol>
-<li>A Distant Water Fishing Nation (DWFN) or EM data provider submits EM data using the CSV templates.</li>
-<li>The CSV tables are converted into the corresponding EM Longline JSON structure.</li>
-<li>The generated JSON is submitted to the <strong>EM Data Quality Control (DQC) API</strong> for validation.</li>
-<li>Validation errors are corrected before resubmission.</li>
-<li>JSON data that pass the applicable DQC checks can then be submitted to the <strong>TUFMAN2 API</strong>.</li>
+<li>An EM data provider submits EM data to SPC/OFP using the CSV templates.</li>
+<li>The CSV tables are converted into the corresponding JSON structured format.</li>
+<li>The converted JSON formatted data are submitted to the <strong>Tufman2 Data Quality Control (DQC) API</strong> for validation.</li>
+<li>Validation errors are corrected by EM data providers before resubmission.</li>
+<li>Data that pass the applicable DQC checks can then be submitted to Tufman2.</li>
 </ol>
-<p>The longer-term direction is for countries and EM service providers to produce and submit the EM Longline JSON format directly. New or upgraded national EM systems are therefore encouraged to design their outputs around the JSON standard so that future transition from CSV to JSON requires minimal system changes.</p>
 <hr>
 <h3>Field formatting details<span class="hx:absolute hx:-mt-20" id="field-formatting-details"></span>
-    <a href="#field-formatting-details" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To minimise transformation during CSV-to-JSON conversion, CSV values should use the same representation as the JSON standard wherever possible.</p>
+    <a href="#field-formatting-details" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The following formatting rules apply to values supplied in the CSV templates:</p>
 <ul>
 <li>
 <p><strong>Datetime values</strong> must use ISO 8601 format in UTC: <code>YYYY-MM-DDTHH:MM:SSZ</code>.</p>
@@ -617,7 +615,7 @@
 </ul>
 </li>
 <li>
-<p><strong>Latitude and longitude</strong> must use the ISO 6709-style representation used by the EM Longline JSON standard, with a maximum of three decimal places in minutes:</p>
+<p><strong>Latitude and longitude</strong> must use the ISO 6709-style representation, with a maximum of three decimal places in minutes:</p>
 <ul>
 <li>Latitude: signed <code>DDMM.MMM</code></li>
 <li>Longitude: signed <code>DDDMM.MMM</code></li>
@@ -639,7 +637,7 @@
 </ul>
 </li>
 <li>
-<p><strong>Boolean values</strong> must be reported as <code>true</code> or <code>false</code>. Leave the CSV cell blank when the value is unknown or not applicable. During CSV-to-JSON conversion, an applicable blank nullable value may be represented as JSON <code>null</code>.</p>
+<p><strong>Boolean values</strong> must be reported as <code>true</code> or <code>false</code>. Leave the CSV cell blank when the value is unknown or not applicable.</p>
 </li>
 <li>
 <p><strong>List-type values</strong> must be stored as valid JSON array strings within the CSV cell.</p>
@@ -656,30 +654,30 @@
 <h3>Mandatory field indicator<span class="hx:absolute hx:-mt-20" id="mandatory-field-indicator"></span>
     <a href="#mandatory-field-indicator" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The <strong>Mandatory</strong> column in the field-description tables identifies whether a field forms part of the <strong>WCPFC Interim Electronic Monitoring Minimum Data Fields</strong>.</p>
 <ul>
-<li><strong>Yes</strong> – a corresponding field is identified in the <strong>DCC and/or WCPFC Field Name</strong> column of the EM Longline JSON standard.</li>
-<li><strong>No</strong> – the field is supplementary to the WCPFC minimum data fields and has been included to support requirements such as data quality, traceability, national programme needs, system integration, or the CSV relational structure.</li>
+<li><strong>Yes</strong> – a corresponding field is identified in the <strong>DCC and/or WCPFC Field Name</strong> column of the EM Longline specification.</li>
+<li><strong>No</strong> – the field is supplementary to the WCPFC minimum data fields and has been included to support requirements such as data quality, traceability, national programme needs, or the CSV relational structure.</li>
 </ul>
-<p>A value of <strong>No does not mean that the field should be omitted</strong>. Some non-minimum fields may still be required by the CSV submission specification, CSV-to-JSON conversion, DQC validation rules, or national programme requirements.</p>
+<p>A value of <strong>No does not necessarily mean that the field can be omitted</strong>. Some non-minimum fields may still be needed to support relationships between the CSV tables, conversion of the CSV submission to the corresponding structured format, applicable DQC validation rules, or additional national EM programme requirements.</p>
 <hr>
 <h3>CSV structure and relationships<span class="hx:absolute hx:-mt-20" id="csv-structure-and-relationships"></span>
-    <a href="#csv-structure-and-relationships" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The current EM CSV specification is structured into three primary data levels:</p>
+    <a href="#csv-structure-and-relationships" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The EM CSV specification is organised into five related tables:</p>
 <ol>
-<li><strong>Trip level</strong> – metadata describing the fishing trip, vessel and EM analysis process.</li>
-<li><strong>Set level</strong> – information about individual fishing sets and mitigation measures.</li>
-<li><strong>Catch level</strong> – information about individual catch events recorded during analysed sets.</li>
+<li><strong>Trip</strong> – metadata describing the fishing trip, vessel and EM analysis process.</li>
+<li><strong>Set</strong> – information about individual fishing sets, fishing effort, bait, gear configuration and mitigation measures.</li>
+<li><strong>Set Log</strong> – timestamped events recorded during setting and hauling operations.</li>
+<li><strong>Catch</strong> – information about individual catch events recorded during analysed sets.</li>
+<li><strong>Compliance Events</strong> – potential compliance events identified during EM analysis.</li>
 </ol>
-<p>Each level is represented as a separate CSV table to reduce repetition and provide a clear relational structure. The JSON standard is hierarchical, so additional relationship fields are included in the CSV representation where needed to reconstruct the nested JSON objects.</p>
+<p>Each data level is represented as a separate CSV table to reduce repetition and provide a clear relational structure. Relationship identifiers are included where needed to associate records across the separate tables.</p>
 <p>The primary relationships are:</p>
 <ul>
-<li><code>em_trip_id</code> uniquely identifies an EM trip.</li>
-<li>Each Set row contains <code>em_trip_id</code> to link the set to its parent Trip row.</li>
-<li><code>em_set_id</code> uniquely identifies an EM set.</li>
-<li>Each Catch row contains both <code>em_trip_id</code> and <code>em_set_id</code> to link the catch to its parent Trip and Set rows.</li>
+<li><code>em_trip_id</code> uniquely identifies an EM trip and links related records to their parent Trip.</li>
+<li><code>em_set_id</code> uniquely identifies an EM set and links Set Log and Catch records to their parent Set.</li>
 <li><code>em_catch_id</code> uniquely identifies an individual catch event.</li>
+<li>Compliance Events use the relevant identifiers to associate an event with the Trip, Set or Catch record to which it relates.</li>
 </ul>
-<p>Relationship identifiers must match exactly between the CSV files submitted as part of the same dataset. Identifier fields marked as CSV-only relationship fields are used during CSV-to-JSON conversion and do not create additional properties in the nested JSON object where the relationship is already represented by the JSON hierarchy.</p>
-<p>The full EM Longline JSON standard also contains <strong>Set Log (EmSetLog)</strong> and <strong>Potential Compliance Event (ComplianceEvent)</strong> structures. These are not yet represented as separate CSV templates in the current three-table release and may be added as the CSV specification is extended toward full JSON coverage.</p>
-<p>The downloadable Trip, Set and Catch templates and their field descriptions are provided below.</p>
+<p>Relationship identifiers must match exactly between the CSV files submitted as part of the same dataset.</p>
+<p>The downloadable Trip, Set, Set Log, Catch and Compliance Event templates and their field descriptions are provided below.</p>
 <hr>
 <h3>Trip Level Data<span class="hx:absolute hx:-mt-20" id="trip-level-data"></span>
     <a href="#trip-level-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The trip-level table captures information about individual fishing trips monitored by EM systems.</p>
@@ -779,11 +777,7 @@
 	</tbody>
 </table>
 <h4>Field descriptions<span class="hx:absolute hx:-mt-20" id="field-descriptions"></span>
-    <a href="#field-descriptions" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><blockquote>
-  <p><strong>Mandatory:</strong> <code>Yes</code> indicates that the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields, based on the corresponding DCC and/or WCPFC field in the EM Longline JSON standard. <code>No</code> means the field is supplementary to those minimum fields; it does <strong>not</strong> mean the field should be omitted. A non-minimum field may still be required for CSV relationships, DQC validation, system integration, or national programme requirements.</p>
-
-</blockquote>
-<table>
+    <a href="#field-descriptions" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
 	<thead>
 			<tr>
 					<th>Field name</th>
@@ -1086,13 +1080,8 @@
 <blockquote>
   <p><strong>Notes:</strong></p>
 <ul>
-<li>em_trip_id must be unique within a submission.</li>
-<li>Datetime values must use ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.</li>
-<li>Latitude must use signed DDMM.MMM and longitude signed DDDMM.MMM, consistent with the EM Longline JSON standard.</li>
+<li><code>em_trip_id</code> must be unique within a submission.</li>
 <li>Percentage fields are expressed as values from 0 to 100.</li>
-<li>Boolean values are true or false; leave the CSV cell blank if the value is unknown or not applicable.</li>
-<li>List-type values must be represented as valid JSON arrays, for example [&ldquo;NNT&rdquo;,&ldquo;RAO&rdquo;] or [4,7].</li>
-<li>The Mandatory value indicates whether the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields, based on whether a corresponding DCC and/or WCPFC field name is present in the EM Longline JSON standard. &lsquo;No&rsquo; does not mean that the field should be omitted; non-minimum fields may still be required for CSV relationships, data quality control, system integration, or national programme requirements.</li>
 <li>Vessel identification should be checked against the <a href="https://vessels.wcpfc.int/"target="_blank" rel="noopener">WCPFC Record of Fishing Vessels</a>. If the UVI/IMO number or WCPFC VID is not available, vessel name, flag State registration number and IRCS should be provided to support unique vessel identification.</li>
 <li>Port codes should use the <a href="/em/12_port_codes/">Port codes reference table</a> where applicable.</li>
 <li>Refer to the <a href="/em/08_em_program_codes/">EM programme codes reference table</a> and <a href="/em/09_drc_codes/">EM DRC codes reference table</a> for standard programme and review-centre codes.</li>
@@ -1167,11 +1156,7 @@
 	</tbody>
 </table>
 <h4>Field descriptions<span class="hx:absolute hx:-mt-20" id="field-descriptions-1"></span>
-    <a href="#field-descriptions-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><blockquote>
-  <p><strong>Mandatory:</strong> <code>Yes</code> indicates that the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields, based on the corresponding DCC and/or WCPFC field in the EM Longline JSON standard. <code>No</code> means the field is supplementary to those minimum fields; it does <strong>not</strong> mean the field should be omitted. A non-minimum field may still be required for CSV relationships, DQC validation, system integration, or national programme requirements.</p>
-
-</blockquote>
-<table>
+    <a href="#field-descriptions-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
 	<thead>
 			<tr>
 					<th>Field name</th>
@@ -1369,13 +1354,8 @@
 <blockquote>
   <p><strong>Notes:</strong></p>
 <ul>
-<li>em_trip_id is a CSV relationship field and must exactly match an em_trip_id in the Trip CSV submitted in the same dataset.</li>
-<li>em_set_id must be unique within the submission.</li>
-<li>Datetime values must use ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.</li>
-<li>Boolean values are true or false; leave the CSV cell blank if the value is unknown or not applicable.</li>
-<li>List-type values must be represented as valid JSON arrays, for example [&ldquo;NNT&rdquo;,&ldquo;RAO&rdquo;] or [&ldquo;SAR&rdquo;,&ldquo;SQU&rdquo;].</li>
-<li>The Mandatory value indicates whether the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields, based on whether a corresponding DCC and/or WCPFC field name is present in the EM Longline JSON standard. &lsquo;No&rsquo; does not mean that the field should be omitted; non-minimum fields may still be required for CSV relationships, data quality control, system integration, or national programme requirements.</li>
-<li>Species codes must use the FAO ASFIS 3-character species code.</li>
+<li><code>em_trip_id</code> must exactly match an <code>em_trip_id</code> in the Trip CSV submitted in the same dataset.</li>
+<li><code>em_set_id</code> must be unique within the submission.</li>
 <li>Refer to the <a href="/em/10_reason_for_not_analysing_codes/">Reason for not analysing codes reference table</a> where a planned or selected set could not be analysed.</li>
 </ul>
 
@@ -1412,11 +1392,7 @@
 	</tbody>
 </table>
 <h4>Field descriptions<span class="hx:absolute hx:-mt-20" id="field-descriptions-2"></span>
-    <a href="#field-descriptions-2" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><blockquote>
-  <p><strong>Mandatory:</strong> <code>Yes</code> indicates that the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields, based on the corresponding DCC and/or WCPFC field in the EM Longline JSON standard. <code>No</code> means the field is supplementary to those minimum fields; it does <strong>not</strong> mean the field should be omitted. A non-minimum field may still be required for CSV relationships, DQC validation, system integration, or national programme requirements.</p>
-
-</blockquote>
-<table>
+    <a href="#field-descriptions-2" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
 	<thead>
 			<tr>
 					<th>Field name</th>
@@ -1488,12 +1464,8 @@
 <blockquote>
   <p><strong>Notes:</strong></p>
 <ul>
-<li>em_trip_id and em_set_id are CSV relationship fields. They must exactly match the corresponding identifiers in the Trip and Set CSV files submitted in the same dataset.</li>
-<li>Datetime values must use ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.</li>
-<li>Latitude must use signed DDMM.MMM and longitude signed DDDMM.MMM, consistent with the EM Longline JSON standard.</li>
-<li>Leave the CSV cell blank where a value is unknown or not applicable.</li>
-<li>The Mandatory value indicates whether the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields, based on whether a corresponding DCC and/or WCPFC field name is present in the EM Longline JSON standard. &lsquo;No&rsquo; does not mean that the field should be omitted; non-minimum fields may still be required for CSV relationships, data quality control, system integration, or national programme requirements.</li>
-<li>log_type must use one of the standard event codes defined for EM set logs: SS, FS, SE, HS, FH, or HE.</li>
+<li><code>em_trip_id</code> and <code>em_set_id</code> must exactly match the corresponding identifiers in the Trip and Set CSV files submitted in the same dataset.</li>
+<li><code>log_type</code> must use one of the standard EM set log event codes: <code>SS</code> (set start), <code>FS</code> (float deployed), <code>SE</code> (set end), <code>HS</code> (haul start), <code>FH</code> (float haul), or <code>HE</code> (haul end).</li>
 </ul>
 
 </blockquote>
@@ -1571,11 +1543,7 @@
 	</tbody>
 </table>
 <h4>Field descriptions<span class="hx:absolute hx:-mt-20" id="field-descriptions-3"></span>
-    <a href="#field-descriptions-3" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><blockquote>
-  <p><strong>Mandatory:</strong> <code>Yes</code> indicates that the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields, based on the corresponding DCC and/or WCPFC field in the EM Longline JSON standard. <code>No</code> means the field is supplementary to those minimum fields; it does <strong>not</strong> mean the field should be omitted. A non-minimum field may still be required for CSV relationships, DQC validation, system integration, or national programme requirements.</p>
-
-</blockquote>
-<table>
+    <a href="#field-descriptions-3" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
 	<thead>
 			<tr>
 					<th>Field name</th>
@@ -1794,16 +1762,8 @@
 <blockquote>
   <p><strong>Notes:</strong></p>
 <ul>
-<li>em_trip_id and em_set_id are CSV relationship fields. They must exactly match the corresponding identifiers in the Trip and Set CSV files submitted in the same dataset.</li>
-<li>em_catch_id must be unique within the submission.</li>
-<li>Datetime values must use ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.</li>
-<li>Latitude must use signed DDMM.MMM and longitude signed DDDMM.MMM, consistent with the EM Longline JSON standard.</li>
-<li>Boolean values are true or false; leave the CSV cell blank if the value is unknown or not applicable.</li>
-<li>The Mandatory value indicates whether the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields, based on whether a corresponding DCC and/or WCPFC field name is present in the EM Longline JSON standard. &lsquo;No&rsquo; does not mean that the field should be omitted; non-minimum fields may still be required for CSV relationships, data quality control, system integration, or national programme requirements.</li>
-<li>Species codes must use the FAO ASFIS 3-character species code.</li>
-<li>Length values are reported in centimetres and may contain up to one decimal place.</li>
-<li>Weight values are reported in kilograms and may contain up to one decimal place.</li>
-<li>Use the applicable reference tables for standard regional codes.</li>
+<li><code>em_trip_id</code> and <code>em_set_id</code> must exactly match the corresponding identifiers in the Trip and Set CSV files submitted in the same dataset.</li>
+<li><code>em_catch_id</code> must be unique within the submission.</li>
 </ul>
 
 </blockquote>
@@ -1843,11 +1803,7 @@
 	</tbody>
 </table>
 <h4>Field descriptions<span class="hx:absolute hx:-mt-20" id="field-descriptions-4"></span>
-    <a href="#field-descriptions-4" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><blockquote>
-  <p><strong>Mandatory:</strong> <code>Yes</code> indicates that the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields, based on the corresponding DCC and/or WCPFC field in the EM Longline JSON standard. <code>No</code> means the field is supplementary to those minimum fields; it does <strong>not</strong> mean the field should be omitted. A non-minimum field may still be required for CSV relationships, DQC validation, system integration, or national programme requirements.</p>
-
-</blockquote>
-<table>
+    <a href="#field-descriptions-4" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
 	<thead>
 			<tr>
 					<th>Field name</th>
@@ -1933,16 +1889,11 @@
 <blockquote>
   <p><strong>Notes:</strong></p>
 <ul>
-<li>em_trip_id is a CSV relationship field and must exactly match an em_trip_id in the Trip CSV submitted in the same dataset.</li>
-<li>event_id must be unique within the submission.</li>
-<li>Datetime values must use ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.</li>
-<li>Latitude must use signed DDMM.MMM and longitude signed DDDMM.MMM, consistent with the EM Longline JSON standard.</li>
-<li>Leave the CSV cell blank where a value is unknown or not applicable.</li>
-<li>event_relation identifies whether the event relates to a Trip, Set, or Catch record.</li>
-<li>event_relation_id must contain the corresponding em_trip_id, em_set_id, or em_catch_id according to the value in event_relation.</li>
-<li>event_category_code and event_type_code must use the standard codes in the <a href="/em/07_potential_compliance_categories_and_events_reference_codes/">Potential Compliance Categories and Events reference table</a>.</li>
-<li>The Mandatory value indicates whether the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields, based on whether a corresponding DCC and/or WCPFC field name is present in the EM Longline JSON standard. &lsquo;No&rsquo; does not mean that the field should be omitted; non-minimum fields may still be required for CSV relationships, data quality control, system integration, or national programme requirements.</li>
-<li>Summary Yes/No indicators for particular compliance issues do not need to be submitted as separate fields where they can be derived from the structured compliance event records.</li>
+<li><code>em_trip_id</code> must exactly match an <code>em_trip_id</code> in the Trip CSV submitted in the same dataset.</li>
+<li><code>event_id</code> must be unique within the submission.</li>
+<li><code>event_relation</code> identifies whether the event relates to a Trip, Set, or Catch record. The corresponding <code>event_relation_id</code> must contain the applicable <code>em_trip_id</code>, <code>em_set_id</code>, or <code>em_catch_id</code>.</li>
+<li><code>event_category_code</code> and <code>event_type_code</code> must use the standard codes in the <a href="/em/07_potential_compliance_categories_and_events_reference_codes/">Potential Compliance Categories and Events reference table</a>.</li>
+<li>Compliance issues are reported through the structured event records; separate Yes/No summary fields are not required where the corresponding result can be derived from these records.</li>
 </ul>
 
 </blockquote>

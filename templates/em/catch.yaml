@@ -10,29 +10,10 @@ section:
 
     Each row represents one catch event and contains the parent trip and set identifiers, catch identifiers, analysis/review
     attributes, species and fate information, measurements, catch position, and Species of Special Interest interaction information.'
-  notes: '- em_trip_id and em_set_id are CSV relationship fields. They must exactly match the corresponding identifiers in
-    the Trip and Set CSV files submitted in the same dataset.
+  notes: |
+    - `em_trip_id` and `em_set_id` must exactly match the corresponding identifiers in the Trip and Set CSV files submitted in the same dataset.
 
-    - em_catch_id must be unique within the submission.
-
-    - Datetime values must use ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.
-
-    - Latitude must use signed DDMM.MMM and longitude signed DDDMM.MMM, consistent with the EM Longline JSON standard.
-
-    - Boolean values are true or false; leave the CSV cell blank if the value is unknown or not applicable.
-
-    - The Mandatory value indicates whether the field is part of the WCPFC Interim Electronic Monitoring Minimum Data Fields,
-    based on whether a corresponding DCC and/or WCPFC field name is present in the EM Longline JSON standard. ''No'' does
-    not mean that the field should be omitted; non-minimum fields may still be required for CSV relationships, data quality
-    control, system integration, or national programme requirements.
-
-    - Species codes must use the FAO ASFIS 3-character species code.
-
-    - Length values are reported in centimetres and may contain up to one decimal place.
-
-    - Weight values are reported in kilograms and may contain up to one decimal place.
-
-    - Use the applicable reference tables for standard regional codes.'
+    - `em_catch_id` must be unique within the submission.
 columns:
   em_trip_id:
     type: str
