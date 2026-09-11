@@ -1,0 +1,2 @@
+em_trip_id,event_id,event_datetime,event_relation,event_relation_id,event_lat,event_lon,event_category_code,event_type_code
+OCEANVOYAGER20250315,OCEANVOYAGER20250315E0001,2025-03-17T06:30:00Z,Set,OCEANVOYAGER2025031520250316194500,-1529.100,+17702.520,P,P1

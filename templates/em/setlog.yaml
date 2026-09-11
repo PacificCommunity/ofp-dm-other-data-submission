@@ -12,6 +12,8 @@ section:
     - `em_trip_id` and `em_set_id` must exactly match the corresponding identifiers in the Trip and Set CSV files submitted in the same dataset.
 
     - `log_type` must use one of the standard EM set log event codes: `SS` (set start), `FS` (float deployed), `SE` (set end), `HS` (haul start), `FH` (float haul), or `HE` (haul end).
+
+    - Set start, set end, haul start, and haul end information are mandatory WCPFC EM data fields. Therefore, each set must include `SS`, `SE`, `HS`, and `HE` set-log events. Float deployment and float haul information are not mandatory; however, where float information is captured, the corresponding `FS` and `FH` set-log events must be provided.
 columns:
   em_trip_id:
     type: str
@@ -19,6 +21,7 @@ columns:
     description: Identifier of the parent EM trip. The value must exactly match an em_trip_id in the Trip CSV submitted in
       the same dataset.
     mandatory: false
+    csv_required: true
     example: OCEANVOYAGER20250315
     csv_only: true
   em_set_id:
@@ -27,6 +30,7 @@ columns:
     description: Identifier of the parent EM set. The value must exactly match an em_set_id in the Set CSV submitted in the
       same dataset.
     mandatory: false
+    csv_required: true
     example: OCEANVOYAGER2025031520250316194500
     csv_only: true
   log_type:
@@ -35,24 +39,25 @@ columns:
     description: 'Code identifying the set-log event: SS = set start, FS = float deployed, SE = set end, HS = haul start,
       FH = float haul, and HE = haul end.'
     mandatory: false
+    csv_required: true
     example: SS
   log_datetime:
     type: datetime
     format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
     description: UTC date and time of the set-log event.
-    mandatory: false
+    mandatory: true
     example: '2025-03-16T19:45:00Z'
   log_lat:
     type: str
     format: Signed DDMM.MMM
     description: Latitude at the time of the set-log event.
-    mandatory: false
+    mandatory: true
     example: '-1518.240'
   log_lon:
     type: str
     format: Signed DDDMM.MMM
     description: Longitude at the time of the set-log event.
-    mandatory: false
+    mandatory: true
     example: '+17632.520'
   float_id:
     type: int

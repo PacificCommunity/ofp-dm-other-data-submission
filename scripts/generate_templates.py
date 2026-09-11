@@ -22,13 +22,13 @@ Output:
         _index.md              # Generated Hugo markdown
         templates/
             <data_type>_<level>_v<version>.csv
+            <data_type>_<level>_minimum_v<version>.csv   # EM only
 """
 
 import argparse
 import csv
 import json
 import sys
-from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -50,6 +50,11 @@ DYNAMIC_DATA_TYPES = [
 
 # Preferred order for EM data levels in generated documentation and CSV processing.
 EM_LEVEL_ORDER = ["trip", "set", "setlog", "catch", "compliance"]
+
+# Page-level descriptions for generated Hugo landing pages.
+DATA_TYPE_DESCRIPTIONS = {
+    "em": "Electronic Monitoring Longline CSV data templates and field specifications",
+}
 
 
 
@@ -147,6 +152,35 @@ class TemplateGenerator:
             if not spec.get("json_only", False)
         }
 
+    def _minimum_csv_columns(self, template_data: dict) -> dict[str, dict]:
+        """Return fields that belong in the WCPFC minimum CSV template.
+
+        The minimum template contains:
+          * fields marked ``mandatory: true`` (WCPFC Appendix 3 minimum fields), and
+          * fields marked ``csv_required: true`` (structural/relationship fields or
+            columns needed to represent conditional WCPFC requirements).
+
+        ``csv_only`` does not control inclusion. Fields marked ``json_only: true``
+        are always excluded from CSV output.
+        """
+        columns = self._csv_columns(template_data)
+        return {
+            name: spec
+            for name, spec in columns.items()
+            if spec.get("mandatory", False) or spec.get("csv_required", False)
+        }
+
+    def _csv_filename(
+        self,
+        data_type: str,
+        level_name: str,
+        version: str,
+        minimum: bool = False,
+    ) -> str:
+        """Build a consistent CSV filename for comprehensive/minimum templates."""
+        suffix = "_minimum" if minimum else ""
+        return f"{data_type}_{level_name}{suffix}_v{version}.csv"
+
     def _format_example_value(self, value: Any) -> str:
         """Format YAML example values consistently for CSV and markdown."""
         if value is None:
@@ -168,10 +202,15 @@ class TemplateGenerator:
         level_name: str,
         template_data: dict,
         dry_run: bool = False,
+        minimum: bool = False,
     ) -> Path:
         """
-        Generate a CSV template file with header and example row.
-        
+        Generate a comprehensive or WCPFC-minimum CSV template with a header
+        and example row.
+
+        For EM minimum templates, fields are selected when either
+        ``mandatory: true`` or ``csv_required: true``.
+
         Returns the path to the generated file.
         """
         # Determine output directory
@@ -183,18 +222,26 @@ class TemplateGenerator:
 
         # Get version from metadata
         version = template_data.get("metadata", {}).get("version", "1.0")
-        
-        # Generate filename: em_trip_v1.0.csv
-        csv_filename = f"{data_type}_{level_name}_v{version}.csv"
+
+        csv_filename = self._csv_filename(
+            data_type, level_name, version, minimum=minimum
+        )
         csv_path = output_dir / csv_filename
         csv_static_path = self.static_downloads_dir / csv_filename
 
         if dry_run:
-            self.log(f"Would generate CSV: {csv_path}", "info")
+            template_label = "minimum" if minimum else "comprehensive"
+            self.log(
+                f"Would generate {template_label} CSV: {csv_path}", "info"
+            )
             return csv_path
 
-        # Get columns and example data
-        columns = self._csv_columns(template_data)
+        # Get columns and example data. Dictionary order preserves YAML field order.
+        columns = (
+            self._minimum_csv_columns(template_data)
+            if minimum
+            else self._csv_columns(template_data)
+        )
         col_names = list(columns.keys())
 
         # Use example values from column definitions. List/dict examples are
@@ -217,7 +264,10 @@ class TemplateGenerator:
             writer.writerow(col_names)
             writer.writerow(example_row)
 
-        self.log(f"Generated CSV: {csv_filename}", "success")
+        template_label = "minimum" if minimum else "comprehensive"
+        self.log(
+            f"Generated {template_label} CSV: {csv_filename}", "success"
+        )
         return csv_path
 
     def _format_type(self, col_type: str) -> str:
@@ -260,18 +310,43 @@ class TemplateGenerator:
             lines.append(intro.strip())
             lines.append("")
 
-        # Download link
-        csv_filename = f"{data_type}_{level_name}_v{version}.csv"
-        lines.append(f"**Download template:** [CSV Template](./templates/{csv_filename})")
+        # Download links. EM exposes both the WCPFC minimum subset and the
+        # comprehensive template; other data types retain the single template.
+        csv_filename = self._csv_filename(data_type, level_name, version)
+        if data_type == "em":
+            minimum_csv_filename = self._csv_filename(
+                data_type, level_name, version, minimum=True
+            )
+            lines.append(
+                f"**Download templates:** "
+                f"[WCPFC minimum CSV](./templates/{minimum_csv_filename}) | "
+                f"[Comprehensive CSV](./templates/{csv_filename})"
+            )
+        else:
+            lines.append(
+                f"**Download template:** [CSV Template](./templates/{csv_filename})"
+            )
         lines.append("")
 
-        # Example row table
-        lines.append("#### Example data")
+        # For EM, show the WCPFC minimum example only. This keeps the rendered
+        # page readable and reinforces the recommended starting template.
+        # The comprehensive downloadable CSV still includes its own example row.
+        example_columns = (
+            self._minimum_csv_columns(template_data)
+            if data_type == "em"
+            else columns
+        )
+        example_heading = (
+            "#### WCPFC minimum CSV example"
+            if data_type == "em"
+            else "#### Example data"
+        )
+        lines.append(example_heading)
         lines.append("")
-        
-        col_names = list(columns.keys())
+
+        col_names = list(example_columns.keys())
         example_row = [
-            self._escape_markdown_cell(columns[col].get("example", ""))
+            self._escape_markdown_cell(example_columns[col].get("example", ""))
             for col in col_names
         ]
 
@@ -430,16 +505,17 @@ class TemplateGenerator:
 
         lines = []
 
-        # Get description from first template's metadata
+        # Use a data-type-level page description where configured. This avoids
+        # inheriting the page description from whichever level YAML loads first.
         first_template = next(iter(templates.values()), {})
-        description = first_template.get("metadata", {}).get(
+        fallback_description = first_template.get("metadata", {}).get(
             "description", f"{data_type.upper()} data templates"
         )
+        description = DATA_TYPE_DESCRIPTIONS.get(data_type, fallback_description)
 
         # Hugo front matter
         lines.append("---")
         lines.append(f'description: "{description}"')
-        lines.append(f'# Auto-generated on {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
         lines.append("# Do not edit manually - regenerate with: python scripts/generate_templates.py")
         lines.append("---")
         lines.append("")
@@ -535,7 +611,19 @@ class TemplateGenerator:
             key=lambda x: (order_index.get(x, len(EM_LEVEL_ORDER)), x),
         )
         for level_name in sorted_level_names:
-            self.generate_csv_template(data_type, level_name, templates[level_name], dry_run)
+            template_data = templates[level_name]
+
+            # Existing comprehensive CSV
+            self.generate_csv_template(
+                data_type, level_name, template_data, dry_run, minimum=False
+            )
+
+            # EM also gets a WCPFC minimum CSV. The minimum subset preserves
+            # YAML field order and includes mandatory OR csv_required fields.
+            if data_type == "em":
+                self.generate_csv_template(
+                    data_type, level_name, template_data, dry_run, minimum=True
+                )
 
         # Generate combined markdown
         self.generate_markdown(data_type, templates, dry_run)

@@ -6,6 +6,15 @@ EM data capture information related to fishing activities, including trip metada
 
 The EM Longline CSV templates provide a structured tabular format for submitting EM data to SPC/OFP. The templates incorporate the [WCPFC Interim Electronic Monitoring Minimum Data Fields](https://meetings.wcpfc.int/node/24512), together with additional fields required to support regional data management and submission processes. Field names, definitions, formats, codes and field order are aligned, where applicable, with the [EM Longline JSON standard](https://pacificcommunity.github.io/tufman2-json-standard/longline-em/). This alignment provides consistency between the CSV and JSON submission formats and supports future transition to direct JSON submission.
 
+### Which template should I use?
+
+Two CSV template options are provided for each EM data table:
+
+- **WCPFC minimum CSV** – recommended as the starting point for EM data providers. It contains the WCPFC Interim Electronic Monitoring Minimum Data Fields together with additional relationship, structural, or conditionally required fields needed to submit the data as linked CSV tables.
+- **Comprehensive CSV** – contains the WCPFC minimum fields plus additional fields drawn from the SPC/FFA/PNA Data Collection Committee (DCC) standard and other fields supported by the EM Longline JSON standard.
+
+Data providers may begin with the WCPFC minimum templates and add fields from the comprehensive templates where those data are available or required by their national EM programme.
+
 ### Data submission workflow
 
 The CSV format is intended for national EM programmes and data providers that currently produce tabular data. The submitted data follow this workflow:
@@ -52,10 +61,10 @@ The following formatting rules apply to values supplied in the CSV templates:
 
 The **Mandatory** column in the field-description tables identifies whether a field forms part of the **WCPFC Interim Electronic Monitoring Minimum Data Fields**.
 
-- **Yes** – a corresponding field is identified in the **DCC and/or WCPFC Field Name** column of the EM Longline specification.
-- **No** – the field is supplementary to the WCPFC minimum data fields and has been included to support requirements such as data quality, traceability, national programme needs, or the CSV relational structure.
+- **Yes** – the field corresponds to a data field identified as **YES** in the WCPFC Interim Electronic Monitoring Minimum Data Fields.
+- **No** – the field is not identified as a WCPFC minimum EM data field. It may nevertheless be included to support CSV relationships, data conversion, data quality, traceability, conditional WCPFC requirements, or national programme requirements.
 
-A value of **No does not necessarily mean that the field can be omitted**. Some non-minimum fields may still be needed to support relationships between the CSV tables, conversion of the CSV submission to the corresponding structured format, applicable DQC validation rules, or additional national EM programme requirements.
+A value of **No does not necessarily mean that the field can be omitted**. Some fields marked **No** are included in the WCPFC minimum CSV because they are required to maintain relationships between the CSV tables or to support information that becomes mandatory under particular conditions.
 
 ---
 
@@ -79,5 +88,36 @@ The primary relationships are:
 - Compliance Events use the relevant identifiers to associate an event with the Trip, Set or Catch record to which it relates.
 
 Relationship identifiers must match exactly between the CSV files submitted as part of the same dataset.
+
+#### Identifier construction rules
+
+Identifiers must be constructed consistently so that records can be linked reliably across tables and across resubmissions.
+
+| Identifier | Construction rule |
+|------------|-------------------|
+| `em_trip_id` | Normalised vessel name + trip departure date in `YYYYMMDD` format |
+| `em_set_id` | Parent `em_trip_id` + UTC set start datetime in `YYYYMMDDHHMMSS` format |
+| `em_catch_id` | Parent `em_set_id` + `C` + four-digit sequential catch number within the set |
+| `event_id` | Parent `em_trip_id` + `E` + four-digit sequential compliance-event number within the trip |
+
+For identifier construction, the **normalised vessel name** must be converted to uppercase and all spaces and punctuation removed, retaining only letters and numbers.
+
+Examples:
+
+- `OCEAN VOYAGER` → `OCEANVOYAGER`
+- `KOYO MARU NO. 55` → `KOYOMARUNO55`
+
+Example identifier hierarchy:
+
+```text
+em_trip_id  = OCEANVOYAGER20250315
+em_set_id   = OCEANVOYAGER2025031520250316194500
+em_catch_id = OCEANVOYAGER2025031520250316194500C0001
+event_id    = OCEANVOYAGER20250315E0001
+```
+
+The datetime component used in `em_set_id` must be derived from the UTC `set_start_datetime`.
+
+Once assigned, `em_trip_id`, `em_set_id`, `em_catch_id`, and `event_id` must remain unchanged when a record is corrected or resubmitted.
 
 The downloadable Trip, Set, Set Log, Catch and Compliance Event templates and their field descriptions are provided below.
