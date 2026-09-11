@@ -1,0 +1,2 @@
+em_trip_id,em_set_id,set_start_datetime,hooks_between_floats,baskets_deployed,baskets_monitored,total_hooks_deployed,bait_species_codes,tori_line_number,has_baits_dyed,has_deep_line_shooter,has_offal_management,has_side_setting_bird_curtain,has_weighted_branch_lines,shark_lines_observed,has_hook_shielding_device
+OCEANVOYAGER20250315,OCEANVOYAGER2025031520250316194500,2025-03-16T19:45:00Z,28,100,100,2800,"[""SAR"",""SQU""]",0,false,true,true,,true,0,

@@ -1,0 +1,2 @@
+em_trip_id,em_set_id,em_catch_id,catch_datetime,hook_no,species_code,fate_code,condition_code,condition_release_code,length_code,length,sex_code,catch_lat,catch_lon,ssi_gear_interaction_code
+OCEANVOYAGER20250315,OCEANVOYAGER2025031520250316194500,OCEANVOYAGER2025031520250316194500C0001,2025-03-17T08:42:00Z,12,YFT,RGG,A1,,UF,122.5,U,-1708.460,+17826.460,IHI

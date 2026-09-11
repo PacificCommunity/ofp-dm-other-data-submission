@@ -1,0 +1,2 @@
+transmission_id,buoy_id,buoy_provider,vessel_name,vessel_imo,transmission_datetime,latitude,longitude,speed_knots,water_temp_c,heading_degrees,battery_voltage,deployment_date,buoy_model,buoy_type,sounder_datetime,start_depth_m,sounder_depth_interval_m,sounder_unit,sounder_values
+TXN-001,SLX+485094,SL,My Vessel,1024172,2025-08-01 20:07:00,-10.2345,123.2346,0.06,29.0,,,2025-03-13 00:00:00,,echo,2025-08-01 18:34:00,0,10,index,0-0-0-0-0-0-0-0-0-1

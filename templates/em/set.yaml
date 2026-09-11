@@ -1,0 +1,190 @@
+metadata:
+  name: EM Set
+  description: E-Monitoring set-level data template
+  version: '1.0'
+  data_level: set
+section:
+  title: Set Level Data
+  intro: 'The set-level table captures information about individual fishing sets monitored by EM systems.
+
+
+    Each row represents one EM set and contains the parent trip identifier, set identifiers, analysis/review attributes, fishing
+    effort information, bait information, and mitigation measures.'
+  notes: |
+    - `em_trip_id` must exactly match an `em_trip_id` in the Trip CSV submitted in the same dataset.
+
+    - `em_set_id` must be unique within the submission. It must be constructed by appending the UTC set start datetime in `YYYYMMDDHHMMSS` format to the parent `em_trip_id`.
+
+    - Refer to the [Reason for not analysing codes reference table](/em/10_Reason_for_not_analysing_codes/) where a planned or selected set could not be analysed.
+columns:
+  em_trip_id:
+    type: str
+    mandatory: false
+    csv_required: true
+    description: Identifier of the parent EM trip. The value must exactly match an em_trip_id in the Trip CSV submitted 
+      in the same dataset.
+    format: Text
+    example: OCEANVOYAGER20250315
+    csv_only: true
+  em_set_id:
+    type: str
+    mandatory: false
+    csv_required: true
+    description: Unique identifier for the EM set. The identifier must be constructed by appending the UTC set start datetime in YYYYMMDDHHMMSS format to the parent em_trip_id.
+    format: Text
+    example: OCEANVOYAGER2025031520250316194500
+  set_number:
+    type: int
+    mandatory: false
+    description: Number of the set within the trip.
+    format: Integer
+    example: 4
+  set_not_analysed_reason:
+    type: str
+    mandatory: false
+    description: Reason code explaining why a set planned or selected for analysis could not be analysed. Refer to the 
+      [Reason for not analysing codes reference table](/em/10_Reason_for_not_analysing_codes/).
+    format: Reason-for-not-analysing code; blank if not applicable
+    example: ''
+  set_analysis_method:
+    type: str
+    mandatory: false
+    description: 'Describes how the EM data for the set were generated, particularly where AI tools are used. For example:
+      "This set was analysed by humans only" or "This set was analysed by humans and AI tools".'
+    format: Text
+    example: This set was analysed by humans only
+  em_set_analyst_codes:
+    type: list
+    mandatory: false
+    description: Code(s) for the EM analyst(s) who produced EM data at the set level.
+    format: Valid JSON array of text codes
+    example: '["NNT"]'
+  set_analysis_start_datetime:
+    type: str
+    mandatory: false
+    description: UTC date and time when analysis of the set started.
+    format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
+    example: '2025-04-03T09:15:00Z'
+  set_analysis_end_datetime:
+    type: str
+    mandatory: false
+    description: UTC date and time when analysis of the set ended.
+    format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
+    example: '2025-04-03T13:45:00Z'
+  em_set_reviewer_codes:
+    type: list
+    mandatory: false
+    description: Code(s) for the EM Data Quality Reviewer(s) at the set level. When one or more reviewer codes are 
+      provided, this indicates that a data quality review was conducted at the set level.
+    format: Valid JSON array of text codes
+    example: '["RAO"]'
+  data_quality_control_process:
+    type: bool
+    mandatory: false
+    description: Indicates whether Data Quality Control procedures were conducted at the set level, including secondary 
+      review to verify or validate EM data.
+    format: true / false; blank if unknown or not applicable
+    example: true
+  set_start_datetime:
+    type: str
+    mandatory: true
+    description: UTC date and time when the first buoy enters the water to start setting the line.
+    format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
+    example: '2025-03-16T19:45:00Z'
+  hooks_between_floats:
+    type: int
+    mandatory: true
+    description: Average number of hooks between floats. The protocol is to count hooks in three baskets towards the 
+      start, three baskets in the middle, and three baskets towards the end of the line, then divide the total by nine.
+    format: Integer
+    example: 28
+  baskets_deployed:
+    type: int
+    mandatory: true
+    description: Total number of baskets deployed. This is the number of floats deployed minus one.
+    format: Integer
+    example: 100
+  baskets_monitored:
+    type: int
+    mandatory: true
+    description: Total number of baskets monitored by the EM analyst during the haul.
+    format: Integer
+    example: 100
+  total_hooks_deployed:
+    type: int
+    mandatory: true
+    description: Total number of hooks deployed in the set, calculated from the number of baskets and hooks between 
+      floats.
+    format: Integer
+    example: 2800
+  bait_species_codes:
+    type: list
+    mandatory: true
+    description: FAO ASFIS species code(s) for bait used during the set. The protocol is to review bait used during 
+      analysis of three baskets towards the start, three baskets in the middle, and three baskets towards the end of the
+      setting operation. Refer to the [FAO ASFIS species list](https://www.fao.org/fishery/en/collection/asfis/en) and 
+      the [Marine species identification manual for horizontal longline 
+      fishermen](https://coastfish.spc.int/en/index.php?option=com_content&Itemid=30&id=341).
+    format: Valid JSON array of text codes
+    example: '["SAR","SQU"]'
+  bait_weight:
+    type: float
+    mandatory: false
+    description: Total weight of bait used for the set, in kilograms.
+    format: Number in kilograms
+    example: 120.5
+  tori_line_number:
+    type: int
+    mandatory: true
+    description: Total number of tori lines attached to tori poles and used during setting. Use 0 when no tori line is 
+      used.
+    format: Integer
+    example: 0
+  has_baits_dyed:
+    type: bool
+    mandatory: true
+    description: Indicates whether blue-dyed bait was used during setting.
+    format: true / false; blank if unknown or not applicable
+    example: false
+  has_deep_line_shooter:
+    type: bool
+    mandatory: true
+    description: Indicates whether a deep-setting line shooter was used.
+    format: true / false; blank if unknown or not applicable
+    example: true
+  has_offal_management:
+    type: bool
+    mandatory: true
+    description: Indicates whether strategic offal disposal was used.
+    format: true / false; blank if unknown or not applicable
+    example: true
+  has_side_setting_bird_curtain:
+    type: bool
+    mandatory: true
+    description: Indicates whether a bird curtain was used with side setting.
+    format: true / false; blank if unknown or not applicable
+    example: ''
+  has_weighted_branch_lines:
+    type: bool
+    mandatory: true
+    description: Indicates whether weighted branch lines were used.
+    format: true / false; blank if unknown or not applicable
+    example: true
+  shark_lines_observed:
+    type: int
+    mandatory: true
+    description: Number of shark lines (branch lines running from floats or drop lines) observed during the set.
+    format: Integer
+    example: 0
+  has_hook_shielding_device:
+    type: bool
+    mandatory: true
+    description: Indicates whether hook-shielding devices were used during line setting.
+    format: true / false; blank if unknown or not applicable
+    example: ''
+  comments:
+    type: str
+    mandatory: false
+    description: Comments at the set level about analysis of the setting and hauling operations.
+    format: String
+    example: Set reviewed in full with strong video quality.

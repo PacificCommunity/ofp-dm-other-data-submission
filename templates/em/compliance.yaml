@@ -1,0 +1,94 @@
+metadata:
+  version: '1.0'
+  description: Electronic Monitoring Longline potential compliance event data template
+section:
+  title: Potential Compliance Event Data
+  intro: 'The potential compliance event table captures events identified during EM analysis that may require compliance review.
+
+
+    Each row represents one potential compliance event and records when and where the event occurred, what part of the EM
+    record it relates to, the applicable compliance category and event codes, and analyst comments.'
+  notes: |
+    - `em_trip_id` must exactly match an `em_trip_id` in the Trip CSV submitted in the same dataset.
+
+    - `event_id` must be unique within the submission. It must be constructed using the parent `em_trip_id`, followed by `E` and a four-digit sequential compliance-event number within the trip, for example `E0001`. The event sequence restarts for each trip.
+
+    - `event_relation` identifies whether the event relates to a Trip, Set, or Catch record. The corresponding `event_relation_id` must contain the applicable `em_trip_id`, `em_set_id`, or `em_catch_id`.
+
+    - `event_category_code` and `event_type_code` must use the standard codes in the [Potential Compliance Categories and Events reference table](/em/07_Potential_Compliance_categories_and_Events_reference_codes/).
+
+    - Compliance issues are reported through the structured event records; separate Yes/No summary fields are not required where the corresponding result can be derived from these records.
+columns:
+  em_trip_id:
+    type: str
+    format: Text
+    description: Identifier of the parent EM trip. The value must exactly match an em_trip_id in the Trip CSV submitted in
+      the same dataset.
+    mandatory: false
+    csv_required: true
+    example: OCEANVOYAGER20250315
+    csv_only: true
+  event_id:
+    type: str
+    format: Text
+    description: Unique identifier for the potential compliance event. The identifier must be constructed using the parent em_trip_id followed by E and a four-digit sequential compliance-event number within the trip.
+    mandatory: false
+    csv_required: true
+    example: OCEANVOYAGER20250315E0001
+  event_datetime:
+    type: datetime
+    format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
+    description: UTC date and time of the potential compliance event. Compliance events may occur outside setting and hauling
+      operations.
+    mandatory: false
+    csv_required: true
+    example: '2025-03-17T06:30:00Z'
+  event_relation:
+    type: str
+    format: Trip | Set | Catch
+    description: 'Indicates the EM record level to which the event relates: Trip, Set, or Catch.'
+    mandatory: false
+    csv_required: true
+    example: Set
+  event_relation_id:
+    type: str
+    format: Text
+    description: Identifier of the related Trip, Set, or Catch record. Provide the applicable em_trip_id, em_set_id, or em_catch_id
+      according to event_relation.
+    mandatory: false
+    csv_required: true
+    example: OCEANVOYAGER2025031520250316194500
+  event_lat:
+    type: str
+    format: Signed DDMM.MMM
+    description: Latitude at the time of the potential compliance event.
+    mandatory: false
+    csv_required: true
+    example: '-1529.100'
+  event_lon:
+    type: str
+    format: Signed DDDMM.MMM
+    description: Longitude at the time of the potential compliance event.
+    mandatory: false
+    csv_required: true
+    example: '+17702.520'
+  event_category_code:
+    type: str
+    format: Regional compliance category code
+    description: Category code for the potential compliance issue identified by the EM analyst. Refer to the [Potential Compliance
+      Categories and Events reference table](/em/07_Potential_Compliance_categories_and_Events_reference_codes/).
+    mandatory: true
+    example: P
+  event_type_code:
+    type: str
+    format: Regional compliance event code
+    description: Specific compliance event code within the selected compliance category. Refer to the [Potential Compliance
+      Categories and Events reference table](/em/07_Potential_Compliance_categories_and_Events_reference_codes/).
+    mandatory: true
+    example: P1
+  comments:
+    type: str
+    format: Text
+    description: Comments from the EM analyst describing the potential compliance event and relevant observable facts.
+    mandatory: false
+    example: Plastic waste (torn bait packaging) discarded overboard during hauling operations.

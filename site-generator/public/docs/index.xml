@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OFP Data Submission – Docs</title>
+    <link>//localhost:1315/docs/</link>
+    <description>Recent content in Docs on OFP Data Submission</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Aug 2026 14:38:18 +1100</lastBuildDate>
+    
+	  <atom:link href="//localhost:1315/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

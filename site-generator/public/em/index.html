@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+<title>OFP Data Submission</title>
+  <meta name="description" content="Electronic Monitoring Longline CSV data templates and field specifications" /><link rel="canonical" href="http://localhost:1313/em/" itemprop="url" />
+
+<meta property="og:title" content="">
+<meta
+  property="og:description"
+  content="
+    Electronic Monitoring Longline CSV data templates and field specifications
+  ">
+<meta
+  property="og:type"
+  content="
+    website
+  ">
+<meta property="og:url" content="http://localhost:1313/em/">
+
+
+	<meta itemprop="name" content="OFP Data Submission">
+	<meta itemprop="description" content="Electronic Monitoring Longline CSV data templates and field specifications">
+	<meta itemprop="wordCount" content="4844">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="OFP Data Submission">
+	<meta name="twitter:description" content="Electronic Monitoring Longline CSV data templates and field specifications">
+<link href="/css/compiled/main.css" rel="stylesheet" />
+    <link href="/css/variables.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet" />
+
+  
+<script src="/js/main-head.js" integrity=""></script>
+
+  
+  
+  </head>
+<body>
+    <a href="#content" class="hx:sr-only hx:focus-visible:not-sr-only hx:focus-visible:fixed hx:focus-visible:z-50 hx:focus-visible:top-2 hx:focus-visible:left-2 hx:focus-visible:bg-primary-500 hx:focus-visible:text-white hx:focus-visible:px-4 hx:focus-visible:py-2 hx:focus-visible:rounded-md hx:focus-visible:text-sm hx:focus-visible:font-medium">Skip to content</a><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
+  <div
+    class="hextra-nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"
+  ></div>
+
+  <nav class="hextra-max-navbar-width hx:mx-auto hx:flex hx:items-center hx:justify-end hx:gap-2 hx:h-16 hx:px-6">
+    <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/">
+    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none">OFP Data Submission</span>
+</a>
+<button type="button" aria-label="Menu" aria-expanded="false" class="hextra-hamburger-menu hx:cursor-pointer hx:-mr-2 hx:rounded-sm hx:p-2 hx:active:bg-gray-400/20 hx:md:hidden hx:hextra-focus-visible-inset"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class='hx:mx-auto hx:flex hextra-max-page-width'>
+    <aside class="hextra-sidebar-container hx:flex hx:flex-col hx:print:hidden hx:md:top-16 hx:md:shrink-0 hx:md:w-64 hx:md:self-start hx:max-md:[transform:translate3d(0,-100%,0)] hx:md:sticky">
+    <div class="hx:px-4 hx:pt-4 hx:md:hidden">
+      <div class="hextra-search-wrapper hx:relative hx:md:w-64">
+  <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      aria-label="Search..."
+      class="hextra-search-input hx:hextra-focus-visible hx:block hx:w-full hx:appearance-none hx:rounded-lg hx:px-3 hx:py-2 hx:transition-colors hx:text-base hx:leading-tight hx:md:text-sm hx:bg-black/[.05] hx:dark:bg-gray-50/10 hx:focus-visible:bg-white hx:dark:focus-visible:bg-dark hx:placeholder:text-gray-500 hx:dark:placeholder:text-gray-400 hx:contrast-more:border hx:contrast-more:border-current"
+      type="search"
+      autocomplete="off"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx:absolute hx:my-1.5 hx:select-none hx:ltr:right-1.5 hx:rtl:left-1.5 hx:h-5 hx:rounded-sm hx:bg-white hx:px-1.5 hx:font-mono hx:text-[10px] hx:font-medium hx:text-gray-500 hx:border hx:border-gray-200 hx:dark:border-gray-100/20 hx:dark:bg-dark/50 hx:contrast-more:border-current hx:contrast-more:text-current hx:contrast-more:dark:border-current hx:items-center hx:gap-1 hx:transition-opacity hx:pointer-events-none hx:hidden hx:sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="hextra-search-results hextra-scrollbar hx:hidden hx:border hx:border-gray-200 hx:bg-white hx:text-gray-100 hx:dark:border-neutral-800 hx:dark:bg-neutral-900 hx:absolute hx:top-full hx:z-20 hx:mt-2 hx:overflow-auto hx:overscroll-contain hx:rounded-xl hx:py-2.5 hx:shadow-xl hx:max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] hx:md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx:inset-x-0 hx:ltr:md:left-auto hx:rtl:md:right-auto hx:contrast-more:border hx:contrast-more:border-gray-900 hx:contrast-more:dark:border-gray-50 hx:w-screen hx:min-h-[100px] hx:max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      aria-label="Search results"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+    <div class="hextra-search-status hx:sr-only" aria-live="polite" role="status"></div>
+  </div>
+</div>
+
+    </div><div class="hextra-scrollbar hx:overflow-y-auto hx:overflow-x-hidden hx:p-4 hx:grow hx:md:h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
+      
+      
+            <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:ltr:pr-8 hx:rtl:pl-8 hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      href="/em/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Em</span>
+    </a>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+  </div>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#electronic-monitoring-em-longline-csv-data-format"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Electronic Monitoring (EM) Longline CSV Data Format</a>
+            </li>
+          </ul>
+  <div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/01_species_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">01 Species Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/02_fate_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">02 Fate Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/03_condition_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">03 Condition Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/04_length_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">04 Length Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/05_gear_interaction_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">05 Gear Interaction Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/06_sex_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">06 Sex Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/07_potential_compliance_categories_and_events_reference_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">07 Potential Compliance Categories and Events Reference Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/08_em_program_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">08 Em Program Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/09_drc_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">09 Drc Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/10_reason_for_not_analysing_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">10 Reason for Not Analysing Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/11_digital_measuring_method_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">11 Digital Measuring Method Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/12_port_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">12 Port Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/13_weight_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">13 Weight Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/14_weighing_method_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">14 Weighing Method Codes</span>
+    </a>
+  </div>
+              
+            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/15_ssis_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">15 Ssis Codes</span>
+    </a>
+  </div>
+              
+            </li></ul>
+      </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:ltr:pr-8 hx:rtl:pl-8 hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/fad/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Fad</span>
+    </a>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+  </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/fad/changelog/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Changelog</span>
+    </a>
+  </div>
+              
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
+        
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/01_species_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">01 Species Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/02_fate_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">02 Fate Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/03_condition_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">03 Condition Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/04_length_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">04 Length Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/05_gear_interaction_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">05 Gear Interaction Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/06_sex_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">06 Sex Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/07_potential_compliance_categories_and_events_reference_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">07 Potential Compliance Categories and Events Reference Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/08_em_program_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">08 Em Program Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/09_drc_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">09 Drc Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/10_reason_for_not_analysing_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">10 Reason for Not Analysing Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/11_digital_measuring_method_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">11 Digital Measuring Method Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/12_port_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">12 Port Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/13_weight_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">13 Weight Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/14_weighing_method_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">14 Weighing Method Codes</span>
+    </a>
+  </div></li>
+            <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:hextra-focus-visible-inset hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/em/15_ssis_codes/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">15 Ssis Codes</span>
+    </a>
+  </div></li>
+        
+      </ul>
+    </div>
+  
+  
+    <div class="  hx:sticky hx:bottom-0 hx:max-h-(--menu-height) hx:bg-white hx:dark:bg-dark hx:mx-4 hx:py-4 hx:shadow-[0_-12px_16px_#fff] hx:flex hx:items-center hx:gap-2 hx:border-gray-200 hx:dark:border-neutral-800 hx:dark:shadow-[0_-12px_16px_#111] hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:shadow-none hx:border-t" data-toggle-animation="show"><div class="hx:flex hx:grow hx:flex-col"><div class="hx:flex hx:justify-items-start hx:group" data-theme="light">
+  <button
+    title="Change theme"
+    data-state="closed"
+    data-location="bottom"
+    class="hextra-theme-toggle hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:h-7 hx:px-2 hx:text-xs hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:font-medium hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:grow"
+    type="button"
+    aria-label="Change theme"
+    aria-expanded="false"
+    aria-haspopup="menu"
+  >
+    <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden">Light</span><svg height=12 class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden">Dark</span><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor">
+  <path d="M 11.996094,2 C 6.4986225,2.0192368 2.03125,6.5024993 2.03125,12 c 0,5.497501 4.4673725,9.980763 9.964844,10 H 12 12.0039 c 5.497471,-0.01924 9.964844,-4.502499 9.964844,-10 0,-5.4975007 -4.467373,-9.9807632 -9.964844,-10 H 12 Z M 12,4 c 4.417218,0.017598 7.96875,3.5822356 7.96875,8 0,4.417764 -3.551532,7.982402 -7.96875,8 z" />
+</svg>
+<span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden">System</span></div>
+  </button>
+  <ul
+    class="hextra-theme-toggle-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-lg hx:border hx:border-gray-200 hx:bg-white hx:p-1 hx:text-sm hx:shadow-lg hx:dark:border-neutral-700 hx:dark:bg-neutral-900"
+    style="position: fixed; inset: auto auto 0px 0px; margin: 0px; min-width: 100px;"
+    data-theme="light"
+    role="menu"
+  >
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="true"
+        tabindex="-1"
+        data-item="light"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        Light
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="false"
+        tabindex="-1"
+        data-item="dark"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        Dark
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="false"
+        tabindex="-1"
+        data-item="system"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        System
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+  </ul>
+</div>
+</div></div></aside>
+    
+<nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="Table of contents">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#electronic-monitoring-em-longline-csv-data-format">Electronic Monitoring (EM) Longline CSV Data Format
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#which-template-should-i-use">Which template should I use?
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#data-submission-workflow">Data submission workflow
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#field-formatting-details">Field formatting details
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#mandatory-field-indicator">Mandatory field indicator
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#csv-structure-and-relationships">CSV structure and relationships
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#identifier-construction-rules">Identifier construction rules
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#trip-level-data">Trip Level Data
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#wcpfc-minimum-csv-example">WCPFC minimum CSV example
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#field-descriptions">Field descriptions
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#set-level-data">Set Level Data
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#wcpfc-minimum-csv-example-1">WCPFC minimum CSV example
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#field-descriptions-1">Field descriptions
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#set-log-data">Set Log Data
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#wcpfc-minimum-csv-example-2">WCPFC minimum CSV example
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#field-descriptions-2">Field descriptions
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#catch-level-data">Catch Level Data
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#wcpfc-minimum-csv-example-3">WCPFC minimum CSV example
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#field-descriptions-3">Field descriptions
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#potential-compliance-event-data">Potential Compliance Event Data
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#wcpfc-minimum-csv-example-4">WCPFC minimum CSV example
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#field-descriptions-4">Field descriptions
+        </a>
+      </li></ul>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
+        <button id="backToTop" tabindex="-1" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
+          <span>Scroll to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main id="content" class="hx:w-full hx:min-w-0 hextra-max-content-width hx:px-6 hx:pt-4 hx:md:px-12">
+        
+        <div class="content">
+          
+          <h2>Electronic Monitoring (EM) Longline CSV Data Format<span class="hx:absolute hx:-mt-20" id="electronic-monitoring-em-longline-csv-data-format"></span>
+    <a href="#electronic-monitoring-em-longline-csv-data-format" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Electronic Monitoring (EM) data provide detailed records of fishing operations and catch events derived from onboard video cameras, sensors, and EM analysis systems. These data are produced through a structured review process conducted by trained EM analysts and, in some cases, supported by automated or artificial intelligence tools.</p>
+<p>EM data capture information related to fishing activities, including trip metadata, gear deployment, catch events, species identification, and potential compliance observations. They support both <strong>scientific monitoring</strong> (for example, species composition, catch characterisation and fishing effort) and <strong>compliance monitoring</strong> (for example, mitigation measures, protected-species interactions and operational practices).</p>
+<p>The EM Longline CSV templates provide a structured tabular format for submitting EM data to SPC/OFP. The templates incorporate the <a href="https://meetings.wcpfc.int/node/24512"target="_blank" rel="noopener">WCPFC Interim Electronic Monitoring Minimum Data Fields</a>, together with additional fields required to support regional data management and submission processes. Field names, definitions, formats, codes and field order are aligned, where applicable, with the <a href="https://pacificcommunity.github.io/tufman2-json-standard/longline-em/"target="_blank" rel="noopener">EM Longline JSON standard</a>. This alignment provides consistency between the CSV and JSON submission formats and supports future transition to direct JSON submission.</p>
+<h3>Which template should I use?<span class="hx:absolute hx:-mt-20" id="which-template-should-i-use"></span>
+    <a href="#which-template-should-i-use" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Two CSV template options are provided for each EM data table:</p>
+<ul>
+<li><strong>WCPFC minimum CSV</strong> – recommended as the starting point for EM data providers. It contains the WCPFC Interim Electronic Monitoring Minimum Data Fields together with additional relationship, structural, or conditionally required fields needed to submit the data as linked CSV tables.</li>
+<li><strong>Comprehensive CSV</strong> – contains the WCPFC minimum fields plus additional fields drawn from the SPC/FFA/PNA Data Collection Committee (DCC) standard and other fields supported by the EM Longline JSON standard.</li>
+</ul>
+<p>Data providers may begin with the WCPFC minimum templates and add fields from the comprehensive templates where those data are available or required by their national EM programme.</p>
+<h3>Data submission workflow<span class="hx:absolute hx:-mt-20" id="data-submission-workflow"></span>
+    <a href="#data-submission-workflow" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The CSV format is intended for national EM programmes and data providers that currently produce tabular data. The submitted data follow this workflow:</p>
+<ol>
+<li>An EM data provider submits EM data to SPC/OFP using the CSV templates.</li>
+<li>The CSV tables are converted into the corresponding JSON structured format.</li>
+<li>The converted JSON formatted data are submitted to the <strong>Tufman2 Data Quality Control (DQC) API</strong> for validation.</li>
+<li>Validation errors are corrected by EM data providers before resubmission.</li>
+<li>Data that pass the applicable DQC checks can then be submitted to Tufman2.</li>
+</ol>
+<hr>
+<h3>Field formatting details<span class="hx:absolute hx:-mt-20" id="field-formatting-details"></span>
+    <a href="#field-formatting-details" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The following formatting rules apply to values supplied in the CSV templates:</p>
+<ul>
+<li>
+<p><strong>Datetime values</strong> must use ISO 8601 format in UTC: <code>YYYY-MM-DDTHH:MM:SSZ</code>.</p>
+<ul>
+<li>Example: <code>2025-03-15T06:30:00Z</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Latitude and longitude</strong> must use the ISO 6709-style representation, with a maximum of three decimal places in minutes:</p>
+<ul>
+<li>Latitude: signed <code>DDMM.MMM</code></li>
+<li>Longitude: signed <code>DDDMM.MMM</code></li>
+<li>Example latitude: <code>-1808.460</code></li>
+<li>Example longitude: <code>+17826.460</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Species codes</strong> must use FAO ASFIS 3-character species codes.</p>
+<ul>
+<li>Example: <code>YFT</code> – Yellowfin tuna</li>
+<li>Example: <code>ALB</code> – Albacore tuna</li>
+</ul>
+</li>
+<li>
+<p><strong>Port codes</strong> must use the applicable UN/LOCODE where a port is reported.</p>
+<ul>
+<li>Example: <code>FJSUV</code> – Suva, Fiji</li>
+</ul>
+</li>
+<li>
+<p><strong>Boolean values</strong> must be reported as <code>true</code> or <code>false</code>. Leave the CSV cell blank when the value is unknown or not applicable.</p>
+</li>
+<li>
+<p><strong>List-type values</strong> must be stored as valid JSON array strings within the CSV cell.</p>
+<ul>
+<li>Text-code example: <code>[&quot;NNT&quot;,&quot;RAO&quot;]</code></li>
+<li>Number example: <code>[4,7]</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Numeric values</strong> must use a decimal point (<code>.</code>) where a decimal value is required. Do not use thousands separators.</p>
+</li>
+</ul>
+<hr>
+<h3>Mandatory field indicator<span class="hx:absolute hx:-mt-20" id="mandatory-field-indicator"></span>
+    <a href="#mandatory-field-indicator" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The <strong>Mandatory</strong> column in the field-description tables identifies whether a field forms part of the <strong>WCPFC Interim Electronic Monitoring Minimum Data Fields</strong>.</p>
+<ul>
+<li><strong>Yes</strong> – the field corresponds to a data field identified as <strong>YES</strong> in the WCPFC Interim Electronic Monitoring Minimum Data Fields.</li>
+<li><strong>No</strong> – the field is not identified as a WCPFC minimum EM data field. It may nevertheless be included to support CSV relationships, data conversion, data quality, traceability, conditional WCPFC requirements, or national programme requirements.</li>
+</ul>
+<p>A value of <strong>No does not necessarily mean that the field can be omitted</strong>. Some fields marked <strong>No</strong> are included in the WCPFC minimum CSV because they are required to maintain relationships between the CSV tables or to support information that becomes mandatory under particular conditions.</p>
+<hr>
+<h3>CSV structure and relationships<span class="hx:absolute hx:-mt-20" id="csv-structure-and-relationships"></span>
+    <a href="#csv-structure-and-relationships" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The EM CSV specification is organised into five related tables:</p>
+<ol>
+<li><strong>Trip</strong> – metadata describing the fishing trip, vessel and EM analysis process.</li>
+<li><strong>Set</strong> – information about individual fishing sets, fishing effort, bait, gear configuration and mitigation measures.</li>
+<li><strong>Set Log</strong> – timestamped events recorded during setting and hauling operations.</li>
+<li><strong>Catch</strong> – information about individual catch events recorded during analysed sets.</li>
+<li><strong>Compliance Events</strong> – potential compliance events identified during EM analysis.</li>
+</ol>
+<p>Each data level is represented as a separate CSV table to reduce repetition and provide a clear relational structure. Relationship identifiers are included where needed to associate records across the separate tables.</p>
+<p>The primary relationships are:</p>
+<ul>
+<li><code>em_trip_id</code> uniquely identifies an EM trip and links related records to their parent Trip.</li>
+<li><code>em_set_id</code> uniquely identifies an EM set and links Set Log and Catch records to their parent Set.</li>
+<li><code>em_catch_id</code> uniquely identifies an individual catch event.</li>
+<li>Compliance Events use the relevant identifiers to associate an event with the Trip, Set or Catch record to which it relates.</li>
+</ul>
+<p>Relationship identifiers must match exactly between the CSV files submitted as part of the same dataset.</p>
+<h4>Identifier construction rules<span class="hx:absolute hx:-mt-20" id="identifier-construction-rules"></span>
+    <a href="#identifier-construction-rules" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Identifiers must be constructed consistently so that records can be linked reliably across tables and across resubmissions.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Identifier</th>
+					<th>Construction rule</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>em_trip_id</code></td>
+					<td>Normalised vessel name + trip departure date in <code>YYYYMMDD</code> format</td>
+			</tr>
+			<tr>
+					<td><code>em_set_id</code></td>
+					<td>Parent <code>em_trip_id</code> + UTC set start datetime in <code>YYYYMMDDHHMMSS</code> format</td>
+			</tr>
+			<tr>
+					<td><code>em_catch_id</code></td>
+					<td>Parent <code>em_set_id</code> + <code>C</code> + four-digit sequential catch number within the set</td>
+			</tr>
+			<tr>
+					<td><code>event_id</code></td>
+					<td>Parent <code>em_trip_id</code> + <code>E</code> + four-digit sequential compliance-event number within the trip</td>
+			</tr>
+	</tbody>
+</table>
+<p>For identifier construction, the <strong>normalised vessel name</strong> must be converted to uppercase and all spaces and punctuation removed, retaining only letters and numbers.</p>
+<p>Examples:</p>
+<ul>
+<li><code>OCEAN VOYAGER</code> → <code>OCEANVOYAGER</code></li>
+<li><code>KOYO MARU NO. 55</code> → <code>KOYOMARUNO55</code></li>
+</ul>
+<p>Example identifier hierarchy:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>em_trip_id  = OCEANVOYAGER20250315
+</span></span><span style="display:flex;"><span>em_set_id   = OCEANVOYAGER2025031520250316194500
+</span></span><span style="display:flex;"><span>em_catch_id = OCEANVOYAGER2025031520250316194500C0001
+</span></span><span style="display:flex;"><span>event_id    = OCEANVOYAGER20250315E0001</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+    aria-label="Copy code"
+    data-copied-label="Copied!"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>The datetime component used in <code>em_set_id</code> must be derived from the UTC <code>set_start_datetime</code>.</p>
+<p>Once assigned, <code>em_trip_id</code>, <code>em_set_id</code>, <code>em_catch_id</code>, and <code>event_id</code> must remain unchanged when a record is corrected or resubmitted.</p>
+<p>The downloadable Trip, Set, Set Log, Catch and Compliance Event templates and their field descriptions are provided below.</p>
+<hr>
+<h3>Trip Level Data<span class="hx:absolute hx:-mt-20" id="trip-level-data"></span>
+    <a href="#trip-level-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The trip-level table captures information about individual fishing trips monitored by EM systems.</p>
+<p>Each row represents one EM trip and contains vessel identifiers, trip timing and locations, EM programme metadata, and analysis/review attributes.</p>
+<p><strong>Download templates:</strong> <a href="./templates/em_trip_minimum_v1.0.csv">WCPFC minimum CSV</a> | <a href="./templates/em_trip_v1.0.csv">Comprehensive CSV</a></p>
+<h4>WCPFC minimum CSV example<span class="hx:absolute hx:-mt-20" id="wcpfc-minimum-csv-example"></span>
+    <a href="#wcpfc-minimum-csv-example" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+	<thead>
+			<tr>
+					<th>em_trip_id</th>
+					<th>vessel_name</th>
+					<th>ircs</th>
+					<th>wcpfc_vid</th>
+					<th>trip_start_datetime</th>
+					<th>depart_port</th>
+					<th>trip_start_lat</th>
+					<th>trip_start_lon</th>
+					<th>return_port</th>
+					<th>trip_end_lat</th>
+					<th>trip_end_lon</th>
+					<th>receiving_vessel_name</th>
+					<th>return_datetime</th>
+					<th>em_program_code</th>
+					<th>analyst_names</th>
+					<th>em_trip_analyst_codes</th>
+					<th>em_review_type</th>
+					<th>drc_em_software</th>
+					<th>trip_analysis_start_datetime</th>
+					<th>trip_analysis_end_datetime</th>
+					<th>total_number_sets</th>
+					<th>has_auto_bait_thrower</th>
+					<th>has_auto_branchline_attacher</th>
+					<th>is_observer_onboard</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>OCEANVOYAGER20250315</td>
+					<td>OCEAN VOYAGER</td>
+					<td>3FIJ8</td>
+					<td>12345</td>
+					<td>2025-03-15T06:30:00Z</td>
+					<td>FJSUV</td>
+					<td>-1808.460</td>
+					<td>+17826.460</td>
+					<td>FJSUV</td>
+					<td>-1808.460</td>
+					<td>+17826.460</td>
+					<td></td>
+					<td>2025-04-02T14:15:00Z</td>
+					<td>FJEM</td>
+					<td>[&ldquo;Analyst One&rdquo;,&ldquo;Analyst Two&rdquo;]</td>
+					<td>[&ldquo;NNT&rdquo;]</td>
+					<td>Secondary review</td>
+					<td>Satlink View Manager version 4.0</td>
+					<td>2025-04-03T08:00:00Z</td>
+					<td>2025-04-04T16:30:00Z</td>
+					<td>10</td>
+					<td>false</td>
+					<td></td>
+					<td>false</td>
+			</tr>
+	</tbody>
+</table>
+<h4>Field descriptions<span class="hx:absolute hx:-mt-20" id="field-descriptions"></span>
+    <a href="#field-descriptions" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+	<thead>
+			<tr>
+					<th>Field name</th>
+					<th>Type</th>
+					<th>Format</th>
+					<th>Description</th>
+					<th>Mandatory</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>em_trip_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Unique identifier for the EM trip. The value must be unique within the submission and must be constructed using the normalised vessel name followed by the trip departure date in YYYYMMDD format. For identifier construction, convert the vessel name to uppercase and remove all spaces and punctuation, retaining only letters and numbers.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>trip_analysis_method</td>
+					<td>Text</td>
+					<td>String</td>
+					<td>Describes how the EM data for the trip were generated, particularly where AI tools are used. For example: &ldquo;This trip was analysed by humans only&rdquo; or &ldquo;This trip was analysed by humans and AI tools&rdquo;.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>uvi</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>The vessel&rsquo;s Unique Vessel Identifier (IMO number), where available. Refer to WCPFC <a href="https://www.wcpfc.int/doc/conservation-and-management-measure-wcpfc-implementation-unique-vessel-identifier-uvi"target="_blank" rel="noopener">Conservation and Management Measure 2013-04</a>.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>vessel_name</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Name of the fishing vessel.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>vessel_owner_company</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Name of the company or vessel owner responsible for the fishing vessel.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>vessel_registration_number</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Flag State registration number of the fishing vessel.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>flag</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Flag or chartering nation of the fishing vessel.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>ircs</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>International Radio Call Sign (IRCS) of the fishing vessel.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>wcpfc_vid</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>WCPFC vessel identification number. Refer to the <a href="https://vessels.wcpfc.int/"target="_blank" rel="noopener">WCPFC Record of Fishing Vessels</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>trip_start_datetime</td>
+					<td>Text</td>
+					<td>ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ</td>
+					<td>UTC date and time the vessel departs a port to start its fishing trip. If the vessel departs from a carrier vessel after an at-sea transhipment, use the UTC date and time of departure from the carrier vessel.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>depart_port</td>
+					<td>Text</td>
+					<td>UN/LOCODE or AT SEA</td>
+					<td>Departure port code (UN/LOCODE). Use AT SEA when the trip begins at sea following a transhipment; departure coordinates must then be provided. Refer to the <a href="/em/12_port_codes/">Port codes reference table</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>trip_start_lat</td>
+					<td>Text</td>
+					<td>ISO 6709: signed DDMM.MMM</td>
+					<td>Latitude of departure when the vessel starts the trip.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>trip_start_lon</td>
+					<td>Text</td>
+					<td>ISO 6709: signed DDDMM.MMM</td>
+					<td>Longitude of departure when the vessel starts the trip.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>return_port</td>
+					<td>Text</td>
+					<td>UN/LOCODE or AT SEA</td>
+					<td>Return port code (UN/LOCODE). Use AT SEA when the trip ends at sea for a full or partial unloading; the applicable receiving-vessel details and coordinates must then be provided. Refer to the <a href="/em/12_port_codes/">Port codes reference table</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>trip_end_lat</td>
+					<td>Text</td>
+					<td>ISO 6709: signed DDMM.MMM</td>
+					<td>Latitude of return when the vessel ends the trip.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>trip_end_lon</td>
+					<td>Text</td>
+					<td>ISO 6709: signed DDDMM.MMM</td>
+					<td>Longitude of return when the vessel ends the trip.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>receiving_vessel_name</td>
+					<td>Text</td>
+					<td>Text; blank if not applicable</td>
+					<td>Name of the vessel receiving catch during an at-sea transhipment. This field is required when the start or end of the trip is AT SEA.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>receiving_vessel_registration_number</td>
+					<td>Text</td>
+					<td>Text; blank if not applicable</td>
+					<td>Flag State registration number of the receiving vessel.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>receiving_vessel_flag</td>
+					<td>Text</td>
+					<td>Text; blank if not applicable</td>
+					<td>Flag or chartering nation of the receiving vessel.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>receiving_vessel_ircs</td>
+					<td>Text</td>
+					<td>Text; blank if not applicable</td>
+					<td>International Radio Call Sign (IRCS) of the receiving vessel.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>receiving_vessel_wcpfc_vid</td>
+					<td>Number</td>
+					<td>Integer; blank if not applicable</td>
+					<td>WCPFC identification number of the receiving vessel. Refer to the <a href="https://vessels.wcpfc.int/"target="_blank" rel="noopener">WCPFC Record of Fishing Vessels</a>.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>return_datetime</td>
+					<td>Text</td>
+					<td>ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ</td>
+					<td>UTC date and time the vessel ends the fishing trip.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>em_program_code</td>
+					<td>Text</td>
+					<td>EM programme code</td>
+					<td>Code identifying the national or sub-regional EM programme, for example FJEM. Refer to the <a href="/em/08_em_program_codes/">EM programme codes reference table</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>em_drc_code</td>
+					<td>Text</td>
+					<td>EM DRC code</td>
+					<td>Code identifying the EM Data Review Centre where the EM records were analysed. Refer to the <a href="/em/09_drc_codes/">EM DRC codes reference table</a>.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>analyst_names</td>
+					<td>List</td>
+					<td>Valid JSON array of analyst names</td>
+					<td>Name(s) of the EM analyst(s) who produced EM data at the trip level. Analyst codes are assigned by SPC/OFP and can be derived from the analyst names provided.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>em_trip_analyst_codes</td>
+					<td>List</td>
+					<td>Valid JSON array of text codes</td>
+					<td>Code(s) for the EM analyst(s) who produced EM data at the trip level. SPC/OFP assigns these codes, and the analyst codes can be derived from the analyst names provided in analyst_names.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>em_review_type</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Type of EM review conducted for the trip.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>em_trip_reviewer_codes</td>
+					<td>List</td>
+					<td>Valid JSON array of text codes</td>
+					<td>Code(s) for the EM Data Quality Reviewer(s) at the trip level. When one or more reviewer codes are provided, this indicates that a data quality review was conducted at the trip level.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>drc_em_provider_code</td>
+					<td>Text</td>
+					<td>String</td>
+					<td>Code for the company providing the EM records analysis system used in the Data Review Centre.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>drc_em_software</td>
+					<td>Text</td>
+					<td>String</td>
+					<td>Software name and version of the system used to analyse the EM records.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>science_analysis_percentage</td>
+					<td>Number</td>
+					<td>Integer, 0-100</td>
+					<td>Percentage of haul analysis undertaken for scientific monitoring. Programmes may vary analysis rates according to national procedures and rationale. 100 means entirely analysed, an intermediate value represents partial analysis, and 0 means compliance-only analysis.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>compliance_analysis_percentage</td>
+					<td>Number</td>
+					<td>Integer, 0-100</td>
+					<td>Percentage of haul analysis undertaken for compliance monitoring. Programmes may vary analysis rates according to national procedures and rationale. 100 means entirely analysed, an intermediate value represents partial analysis, and 0 means science-only analysis.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>trip_analysis_start_datetime</td>
+					<td>Text</td>
+					<td>ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ</td>
+					<td>UTC date and time when analysis of the trip started.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>trip_analysis_end_datetime</td>
+					<td>Text</td>
+					<td>ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ</td>
+					<td>UTC date and time when analysis of the trip ended.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>total_number_sets</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>Total number of sets conducted by the vessel during the trip.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>set_numbers_planned_for_analysis</td>
+					<td>List</td>
+					<td>Valid JSON array of integers</td>
+					<td>List of set numbers planned for analysis. The EM programme should be able to demonstrate the protocol used to select sets, including the random-selection process.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>digital_calibration</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether the EM analyst performed a digital calibration of the measuring tool before analysis. This supports assessment of the accuracy of digital length measurements.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>has_auto_bait_thrower</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether the vessel has an automatic bait thrower.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>has_auto_branchline_attacher</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether the vessel has an automatic branchline attacher.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>is_observer_onboard</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether the EM records show an observer onboard the vessel.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>comments</td>
+					<td>Text</td>
+					<td>String</td>
+					<td>General comments at the trip level about the analysis of EM records and production of EM data.</td>
+					<td>No</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote>
+  <p><strong>Notes:</strong></p>
+<ul>
+<li><code>em_trip_id</code> must be unique within a submission. It must be constructed using the normalised vessel name followed by the trip departure date in <code>YYYYMMDD</code> format. For identifier construction, convert the vessel name to uppercase and remove all spaces and punctuation, retaining only letters and numbers.</li>
+<li>Percentage fields are expressed as values from 0 to 100.</li>
+<li>Vessel identification should be checked against the <a href="https://vessels.wcpfc.int/"target="_blank" rel="noopener">WCPFC Record of Fishing Vessels</a>. If the UVI/IMO number or WCPFC VID is not available, vessel name, flag State registration number and IRCS should be provided to support unique vessel identification.</li>
+<li>Port codes should use the <a href="/em/12_port_codes/">Port codes reference table</a> where applicable.</li>
+<li>Refer to the <a href="/em/08_em_program_codes/">EM programme codes reference table</a> and <a href="/em/09_drc_codes/">EM DRC codes reference table</a> for standard programme and review-centre codes.</li>
+</ul>
+
+</blockquote>
+<h3>Set Level Data<span class="hx:absolute hx:-mt-20" id="set-level-data"></span>
+    <a href="#set-level-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The set-level table captures information about individual fishing sets monitored by EM systems.</p>
+<p>Each row represents one EM set and contains the parent trip identifier, set identifiers, analysis/review attributes, fishing effort information, bait information, and mitigation measures.</p>
+<p><strong>Download templates:</strong> <a href="./templates/em_set_minimum_v1.0.csv">WCPFC minimum CSV</a> | <a href="./templates/em_set_v1.0.csv">Comprehensive CSV</a></p>
+<h4>WCPFC minimum CSV example<span class="hx:absolute hx:-mt-20" id="wcpfc-minimum-csv-example-1"></span>
+    <a href="#wcpfc-minimum-csv-example-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+	<thead>
+			<tr>
+					<th>em_trip_id</th>
+					<th>em_set_id</th>
+					<th>set_start_datetime</th>
+					<th>hooks_between_floats</th>
+					<th>baskets_deployed</th>
+					<th>baskets_monitored</th>
+					<th>total_hooks_deployed</th>
+					<th>bait_species_codes</th>
+					<th>tori_line_number</th>
+					<th>has_baits_dyed</th>
+					<th>has_deep_line_shooter</th>
+					<th>has_offal_management</th>
+					<th>has_side_setting_bird_curtain</th>
+					<th>has_weighted_branch_lines</th>
+					<th>shark_lines_observed</th>
+					<th>has_hook_shielding_device</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>OCEANVOYAGER20250315</td>
+					<td>OCEANVOYAGER2025031520250316194500</td>
+					<td>2025-03-16T19:45:00Z</td>
+					<td>28</td>
+					<td>100</td>
+					<td>100</td>
+					<td>2800</td>
+					<td>[&ldquo;SAR&rdquo;,&ldquo;SQU&rdquo;]</td>
+					<td>0</td>
+					<td>false</td>
+					<td>true</td>
+					<td>true</td>
+					<td></td>
+					<td>true</td>
+					<td>0</td>
+					<td></td>
+			</tr>
+	</tbody>
+</table>
+<h4>Field descriptions<span class="hx:absolute hx:-mt-20" id="field-descriptions-1"></span>
+    <a href="#field-descriptions-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+	<thead>
+			<tr>
+					<th>Field name</th>
+					<th>Type</th>
+					<th>Format</th>
+					<th>Description</th>
+					<th>Mandatory</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>em_trip_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Identifier of the parent EM trip. The value must exactly match an em_trip_id in the Trip CSV submitted in the same dataset.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>em_set_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Unique identifier for the EM set. The identifier must be constructed by appending the UTC set start datetime in YYYYMMDDHHMMSS format to the parent em_trip_id.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>set_number</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>Number of the set within the trip.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>set_not_analysed_reason</td>
+					<td>Text</td>
+					<td>Reason-for-not-analysing code; blank if not applicable</td>
+					<td>Reason code explaining why a set planned or selected for analysis could not be analysed. Refer to the <a href="/em/10_reason_for_not_analysing_codes/">Reason for not analysing codes reference table</a>.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>set_analysis_method</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Describes how the EM data for the set were generated, particularly where AI tools are used. For example: &ldquo;This set was analysed by humans only&rdquo; or &ldquo;This set was analysed by humans and AI tools&rdquo;.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>em_set_analyst_codes</td>
+					<td>List</td>
+					<td>Valid JSON array of text codes</td>
+					<td>Code(s) for the EM analyst(s) who produced EM data at the set level.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>set_analysis_start_datetime</td>
+					<td>Text</td>
+					<td>ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ</td>
+					<td>UTC date and time when analysis of the set started.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>set_analysis_end_datetime</td>
+					<td>Text</td>
+					<td>ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ</td>
+					<td>UTC date and time when analysis of the set ended.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>em_set_reviewer_codes</td>
+					<td>List</td>
+					<td>Valid JSON array of text codes</td>
+					<td>Code(s) for the EM Data Quality Reviewer(s) at the set level. When one or more reviewer codes are provided, this indicates that a data quality review was conducted at the set level.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>data_quality_control_process</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether Data Quality Control procedures were conducted at the set level, including secondary review to verify or validate EM data.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>set_start_datetime</td>
+					<td>Text</td>
+					<td>ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ</td>
+					<td>UTC date and time when the first buoy enters the water to start setting the line.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>hooks_between_floats</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>Average number of hooks between floats. The protocol is to count hooks in three baskets towards the start, three baskets in the middle, and three baskets towards the end of the line, then divide the total by nine.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>baskets_deployed</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>Total number of baskets deployed. This is the number of floats deployed minus one.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>baskets_monitored</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>Total number of baskets monitored by the EM analyst during the haul.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>total_hooks_deployed</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>Total number of hooks deployed in the set, calculated from the number of baskets and hooks between floats.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>bait_species_codes</td>
+					<td>List</td>
+					<td>Valid JSON array of text codes</td>
+					<td>FAO ASFIS species code(s) for bait used during the set. The protocol is to review bait used during analysis of three baskets towards the start, three baskets in the middle, and three baskets towards the end of the setting operation. Refer to the <a href="https://www.fao.org/fishery/en/collection/asfis/en"target="_blank" rel="noopener">FAO ASFIS species list</a> and the <a href="https://coastfish.spc.int/en/index.php?option=com_content&amp;Itemid=30&amp;id=341"target="_blank" rel="noopener">Marine species identification manual for horizontal longline fishermen</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>bait_weight</td>
+					<td>Number</td>
+					<td>Number in kilograms</td>
+					<td>Total weight of bait used for the set, in kilograms.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>tori_line_number</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>Total number of tori lines attached to tori poles and used during setting. Use 0 when no tori line is used.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>has_baits_dyed</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether blue-dyed bait was used during setting.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>has_deep_line_shooter</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether a deep-setting line shooter was used.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>has_offal_management</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether strategic offal disposal was used.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>has_side_setting_bird_curtain</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether a bird curtain was used with side setting.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>has_weighted_branch_lines</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether weighted branch lines were used.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>shark_lines_observed</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>Number of shark lines (branch lines running from floats or drop lines) observed during the set.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>has_hook_shielding_device</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether hook-shielding devices were used during line setting.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>comments</td>
+					<td>Text</td>
+					<td>String</td>
+					<td>Comments at the set level about analysis of the setting and hauling operations.</td>
+					<td>No</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote>
+  <p><strong>Notes:</strong></p>
+<ul>
+<li><code>em_trip_id</code> must exactly match an <code>em_trip_id</code> in the Trip CSV submitted in the same dataset.</li>
+<li><code>em_set_id</code> must be unique within the submission. It must be constructed by appending the UTC set start datetime in <code>YYYYMMDDHHMMSS</code> format to the parent <code>em_trip_id</code>.</li>
+<li>Refer to the <a href="/em/10_reason_for_not_analysing_codes/">Reason for not analysing codes reference table</a> where a planned or selected set could not be analysed.</li>
+</ul>
+
+</blockquote>
+<h3>Set Log Data<span class="hx:absolute hx:-mt-20" id="set-log-data"></span>
+    <a href="#set-log-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The set-log table captures timestamped events recorded during the setting and hauling of a fishing set.</p>
+<p>Each row represents one EM set-log event and contains the parent trip and set identifiers, event type, event timestamp, position, optional float identifier, and comments.</p>
+<p><strong>Download templates:</strong> <a href="./templates/em_setlog_minimum_v1.0.csv">WCPFC minimum CSV</a> | <a href="./templates/em_setlog_v1.0.csv">Comprehensive CSV</a></p>
+<h4>WCPFC minimum CSV example<span class="hx:absolute hx:-mt-20" id="wcpfc-minimum-csv-example-2"></span>
+    <a href="#wcpfc-minimum-csv-example-2" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+	<thead>
+			<tr>
+					<th>em_trip_id</th>
+					<th>em_set_id</th>
+					<th>log_type</th>
+					<th>log_datetime</th>
+					<th>log_lat</th>
+					<th>log_lon</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>OCEANVOYAGER20250315</td>
+					<td>OCEANVOYAGER2025031520250316194500</td>
+					<td>SS</td>
+					<td>2025-03-16T19:45:00Z</td>
+					<td>-1518.240</td>
+					<td>+17632.520</td>
+			</tr>
+	</tbody>
+</table>
+<h4>Field descriptions<span class="hx:absolute hx:-mt-20" id="field-descriptions-2"></span>
+    <a href="#field-descriptions-2" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+	<thead>
+			<tr>
+					<th>Field name</th>
+					<th>Type</th>
+					<th>Format</th>
+					<th>Description</th>
+					<th>Mandatory</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>em_trip_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Identifier of the parent EM trip. The value must exactly match an em_trip_id in the Trip CSV submitted in the same dataset.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>em_set_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Identifier of the parent EM set. The value must exactly match an em_set_id in the Set CSV submitted in the same dataset.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>log_type</td>
+					<td>Text</td>
+					<td>SS | FS | SE | HS | FH | HE</td>
+					<td>Code identifying the set-log event: SS = set start, FS = float deployed, SE = set end, HS = haul start, FH = float haul, and HE = haul end.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>log_datetime</td>
+					<td>DateTime</td>
+					<td>ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ</td>
+					<td>UTC date and time of the set-log event.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>log_lat</td>
+					<td>Text</td>
+					<td>Signed DDMM.MMM</td>
+					<td>Latitude at the time of the set-log event.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>log_lon</td>
+					<td>Text</td>
+					<td>Signed DDDMM.MMM</td>
+					<td>Longitude at the time of the set-log event.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>float_id</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>Incremental identifier assigned to a float during setting or hauling, where applicable.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>comments</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Comments or additional information about the set-log event.</td>
+					<td>No</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote>
+  <p><strong>Notes:</strong></p>
+<ul>
+<li><code>em_trip_id</code> and <code>em_set_id</code> must exactly match the corresponding identifiers in the Trip and Set CSV files submitted in the same dataset.</li>
+<li><code>log_type</code> must use one of the standard EM set log event codes: <code>SS</code> (set start), <code>FS</code> (float deployed), <code>SE</code> (set end), <code>HS</code> (haul start), <code>FH</code> (float haul), or <code>HE</code> (haul end).</li>
+<li>Set start, set end, haul start, and haul end information are mandatory WCPFC EM data fields. Therefore, each set must include <code>SS</code>, <code>SE</code>, <code>HS</code>, and <code>HE</code> set-log events. Float deployment and float haul information are not mandatory; however, where float information is captured, the corresponding <code>FS</code> and <code>FH</code> set-log events must be provided.</li>
+</ul>
+
+</blockquote>
+<h3>Catch Level Data<span class="hx:absolute hx:-mt-20" id="catch-level-data"></span>
+    <a href="#catch-level-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The catch-level table captures information about individual catch events identified during EM analysis.</p>
+<p>Each row represents one catch event and contains the parent trip and set identifiers, catch identifiers, analysis/review attributes, species and fate information, measurements, catch position, and Species of Special Interest interaction information.</p>
+<p><strong>Download templates:</strong> <a href="./templates/em_catch_minimum_v1.0.csv">WCPFC minimum CSV</a> | <a href="./templates/em_catch_v1.0.csv">Comprehensive CSV</a></p>
+<h4>WCPFC minimum CSV example<span class="hx:absolute hx:-mt-20" id="wcpfc-minimum-csv-example-3"></span>
+    <a href="#wcpfc-minimum-csv-example-3" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+	<thead>
+			<tr>
+					<th>em_trip_id</th>
+					<th>em_set_id</th>
+					<th>em_catch_id</th>
+					<th>catch_datetime</th>
+					<th>hook_no</th>
+					<th>species_code</th>
+					<th>fate_code</th>
+					<th>condition_code</th>
+					<th>condition_release_code</th>
+					<th>length_code</th>
+					<th>length</th>
+					<th>sex_code</th>
+					<th>catch_lat</th>
+					<th>catch_lon</th>
+					<th>ssi_gear_interaction_code</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>OCEANVOYAGER20250315</td>
+					<td>OCEANVOYAGER2025031520250316194500</td>
+					<td>OCEANVOYAGER2025031520250316194500C0001</td>
+					<td>2025-03-17T08:42:00Z</td>
+					<td>12</td>
+					<td>YFT</td>
+					<td>RGG</td>
+					<td>A1</td>
+					<td></td>
+					<td>UF</td>
+					<td>122.5</td>
+					<td>U</td>
+					<td>-1708.460</td>
+					<td>+17826.460</td>
+					<td>IHI</td>
+			</tr>
+	</tbody>
+</table>
+<h4>Field descriptions<span class="hx:absolute hx:-mt-20" id="field-descriptions-3"></span>
+    <a href="#field-descriptions-3" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+	<thead>
+			<tr>
+					<th>Field name</th>
+					<th>Type</th>
+					<th>Format</th>
+					<th>Description</th>
+					<th>Mandatory</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>em_trip_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Identifier of the parent EM trip. The value must exactly match an em_trip_id in the Trip CSV submitted in the same dataset.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>em_set_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Identifier of the parent EM set. The value must exactly match an em_set_id in the Set CSV submitted in the same dataset.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>em_catch_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Unique identifier for the catch event. The identifier must be constructed using the parent em_set_id followed by C and a four-digit sequential catch number within the set.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>catch_analysis_method</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Describes how the EM data for the catch were generated, particularly where AI tools are used. For example: &ldquo;This catch was analysed by humans only&rdquo; or &ldquo;This catch was analysed by humans and AI tools&rdquo;.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>em_catch_analyst_codes</td>
+					<td>List</td>
+					<td>Valid JSON array of text codes</td>
+					<td>Code(s) for the EM analyst(s) who produced EM data at the catch level.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>em_catch_reviewer_codes</td>
+					<td>List</td>
+					<td>Valid JSON array of text codes</td>
+					<td>Code(s) for the EM Data Quality Reviewer(s) at the catch level. When one or more reviewer codes are provided, this indicates that a data quality review was conducted at the catch level.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>snap_datetime</td>
+					<td>Text</td>
+					<td>ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ</td>
+					<td>UTC date and time, to the nearest second, when the branchline snap for the catch event is removed from the mainline.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>catch_datetime</td>
+					<td>Text</td>
+					<td>ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ</td>
+					<td>UTC date and time, to the nearest second, of the catch event as recorded by the EM equipment.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>camera_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Identifier of the EM camera that recorded the catch event.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>hook_no</td>
+					<td>Number</td>
+					<td>Integer</td>
+					<td>Hook number between successive floats on which the catch was caught.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>species_code</td>
+					<td>Text</td>
+					<td>FAO ASFIS 3-character species code</td>
+					<td>FAO ASFIS 3-character code for the species identified from the catch event. Refer to the <a href="/em/01_species_codes/">Species codes reference table</a> and the <a href="https://www.fao.org/fishery/en/collection/asfis/en"target="_blank" rel="noopener">FAO ASFIS species list</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>fate_code</td>
+					<td>Text</td>
+					<td>Regional fate code</td>
+					<td>Regional fate code indicating whether and how the catch was retained, discarded, or escaped. Refer to the <a href="/em/02_fate_codes/">Fate codes reference table</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>condition_code</td>
+					<td>Text</td>
+					<td>Regional condition code</td>
+					<td>Regional code describing the condition of the catch when caught. Refer to the <a href="/em/03_condition_codes/">Condition codes reference table</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>condition_release_code</td>
+					<td>Text</td>
+					<td>Regional condition code; blank if not applicable</td>
+					<td>Regional code describing the condition of the catch when released or discarded. Leave blank when the catch is retained. Refer to the <a href="/em/03_condition_codes/">Condition codes reference table</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>digital_measuring_method</td>
+					<td>Text</td>
+					<td>Digital measuring method code</td>
+					<td>Code for the digital measuring method used to produce the specimen length. Refer to the <a href="/em/11_digital_measuring_method_codes/">Digital measuring method codes reference table</a>.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>is_footage_quality_sufficient</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether footage quality is sufficient for the specimen to be measured precisely and identified with confidence.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>is_fish_in_calibration_area</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether the measured specimen is positioned within the calibration area on deck.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>is_length_accurate</td>
+					<td>Boolean</td>
+					<td>true / false; blank if unknown or not applicable</td>
+					<td>Indicates whether the digital length measurement is considered accurate. For a measurement to be accurate, digital calibration, sufficient footage quality, and placement within the calibration area must all be true. If digital_measuring_method is M2, this value must be false.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>length_code</td>
+					<td>Text</td>
+					<td>Regional length code</td>
+					<td>Regional code identifying the type of length measurement. If digital_measuring_method is M1, length_code cannot be OW; if digital_measuring_method is M2, length_code must be OW. Refer to the <a href="/em/04_length_codes/">Length codes reference table</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>length</td>
+					<td>Number</td>
+					<td>Decimal number (cm), max 1 decimal place</td>
+					<td>Digital length measurement of the specimen in centimetres, to a maximum of one decimal place. Refer to pages 77–79 of the <a href="https://www.spc.int/DigitalLibrary/Doc/FAME/Manuals/Longline_Observer_Guide_2021.html"target="_blank" rel="noopener">Longline Observer Guide</a> for regional length-measurement protocols.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>sex_code</td>
+					<td>Text</td>
+					<td>Regional sex code</td>
+					<td>Regional code for the sex of the catch, where it can be determined. Refer to the <a href="/em/06_sex_codes/">Sex codes reference table</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>catch_weight_vessel</td>
+					<td>Number</td>
+					<td>Decimal number (kg), max 1 decimal place</td>
+					<td>Weight of the specimen in kilograms, to the nearest decimal, as measured by the vessel crew.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>catch_weight_code</td>
+					<td>Text</td>
+					<td>Regional weight code</td>
+					<td>Regional code describing the weight recorded for the specimen. Refer to the <a href="/em/13_weight_codes/">Weight codes reference table</a>.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>weighing_method</td>
+					<td>Text</td>
+					<td>Regional weighing method code</td>
+					<td>Code for the method used to produce catch_weight_vessel. Refer to the <a href="/em/14_weighing_method_codes/">Weighing method codes reference table</a>.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>catch_lat</td>
+					<td>Text</td>
+					<td>ISO 6709: signed DDMM.MMM</td>
+					<td>Latitude at the time of the catch event.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>catch_lon</td>
+					<td>Text</td>
+					<td>ISO 6709: signed DDDMM.MMM</td>
+					<td>Longitude at the time of the catch event.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>ssi_gear_interaction_code</td>
+					<td>Text</td>
+					<td>SSI gear interaction code; blank if not applicable</td>
+					<td>Regional gear-interaction code for Species of Special Interest (SSI). Refer to the <a href="/em/05_gear_interaction_codes/">Gear interaction codes reference table</a> and <a href="/em/15_ssis_codes/">SSI codes reference table</a>. Additional guidance on SSI vessel interactions is provided on pages 97–98 of the <a href="https://www.spc.int/DigitalLibrary/Doc/FAME/Manuals/Longline_Observer_Guide_2021.html"target="_blank" rel="noopener">Longline Observer Guide</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>tag_recovery_note</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Text note recording tag recovery information for the catch event, where applicable.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>ema_comments</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Comments from the EM analyst about the catch event.</td>
+					<td>No</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote>
+  <p><strong>Notes:</strong></p>
+<ul>
+<li><code>em_trip_id</code> and <code>em_set_id</code> must exactly match the corresponding identifiers in the Trip and Set CSV files submitted in the same dataset.</li>
+<li><code>em_catch_id</code> must be unique within the submission. It must be constructed using the parent <code>em_set_id</code>, followed by <code>C</code> and a four-digit sequential catch number within the set, for example <code>C0001</code>. The catch sequence restarts for each set.</li>
+<li><code>catch_datetime</code>, <code>catch_lat</code>, and <code>catch_lon</code> are not mandatory for all catch records. However, for Species of Special Interest (SSI) interactions, the interaction date and time, latitude, and longitude are mandatory WCPFC EM data fields and must be provided.</li>
+</ul>
+
+</blockquote>
+<h3>Potential Compliance Event Data<span class="hx:absolute hx:-mt-20" id="potential-compliance-event-data"></span>
+    <a href="#potential-compliance-event-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The potential compliance event table captures events identified during EM analysis that may require compliance review.</p>
+<p>Each row represents one potential compliance event and records when and where the event occurred, what part of the EM record it relates to, the applicable compliance category and event codes, and analyst comments.</p>
+<p><strong>Download templates:</strong> <a href="./templates/em_compliance_minimum_v1.0.csv">WCPFC minimum CSV</a> | <a href="./templates/em_compliance_v1.0.csv">Comprehensive CSV</a></p>
+<h4>WCPFC minimum CSV example<span class="hx:absolute hx:-mt-20" id="wcpfc-minimum-csv-example-4"></span>
+    <a href="#wcpfc-minimum-csv-example-4" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+	<thead>
+			<tr>
+					<th>em_trip_id</th>
+					<th>event_id</th>
+					<th>event_datetime</th>
+					<th>event_relation</th>
+					<th>event_relation_id</th>
+					<th>event_lat</th>
+					<th>event_lon</th>
+					<th>event_category_code</th>
+					<th>event_type_code</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>OCEANVOYAGER20250315</td>
+					<td>OCEANVOYAGER20250315E0001</td>
+					<td>2025-03-17T06:30:00Z</td>
+					<td>Set</td>
+					<td>OCEANVOYAGER2025031520250316194500</td>
+					<td>-1529.100</td>
+					<td>+17702.520</td>
+					<td>P</td>
+					<td>P1</td>
+			</tr>
+	</tbody>
+</table>
+<h4>Field descriptions<span class="hx:absolute hx:-mt-20" id="field-descriptions-4"></span>
+    <a href="#field-descriptions-4" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+	<thead>
+			<tr>
+					<th>Field name</th>
+					<th>Type</th>
+					<th>Format</th>
+					<th>Description</th>
+					<th>Mandatory</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>em_trip_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Identifier of the parent EM trip. The value must exactly match an em_trip_id in the Trip CSV submitted in the same dataset.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>event_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Unique identifier for the potential compliance event. The identifier must be constructed using the parent em_trip_id followed by E and a four-digit sequential compliance-event number within the trip.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>event_datetime</td>
+					<td>DateTime</td>
+					<td>ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ</td>
+					<td>UTC date and time of the potential compliance event. Compliance events may occur outside setting and hauling operations.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>event_relation</td>
+					<td>Text</td>
+					<td>Trip | Set | Catch</td>
+					<td>Indicates the EM record level to which the event relates: Trip, Set, or Catch.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>event_relation_id</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Identifier of the related Trip, Set, or Catch record. Provide the applicable em_trip_id, em_set_id, or em_catch_id according to event_relation.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>event_lat</td>
+					<td>Text</td>
+					<td>Signed DDMM.MMM</td>
+					<td>Latitude at the time of the potential compliance event.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>event_lon</td>
+					<td>Text</td>
+					<td>Signed DDDMM.MMM</td>
+					<td>Longitude at the time of the potential compliance event.</td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>event_category_code</td>
+					<td>Text</td>
+					<td>Regional compliance category code</td>
+					<td>Category code for the potential compliance issue identified by the EM analyst. Refer to the <a href="/em/07_potential_compliance_categories_and_events_reference_codes/">Potential Compliance Categories and Events reference table</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>event_type_code</td>
+					<td>Text</td>
+					<td>Regional compliance event code</td>
+					<td>Specific compliance event code within the selected compliance category. Refer to the <a href="/em/07_potential_compliance_categories_and_events_reference_codes/">Potential Compliance Categories and Events reference table</a>.</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>comments</td>
+					<td>Text</td>
+					<td>Text</td>
+					<td>Comments from the EM analyst describing the potential compliance event and relevant observable facts.</td>
+					<td>No</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote>
+  <p><strong>Notes:</strong></p>
+<ul>
+<li><code>em_trip_id</code> must exactly match an <code>em_trip_id</code> in the Trip CSV submitted in the same dataset.</li>
+<li><code>event_id</code> must be unique within the submission. It must be constructed using the parent <code>em_trip_id</code>, followed by <code>E</code> and a four-digit sequential compliance-event number within the trip, for example <code>E0001</code>. The event sequence restarts for each trip.</li>
+<li><code>event_relation</code> identifies whether the event relates to a Trip, Set, or Catch record. The corresponding <code>event_relation_id</code> must contain the applicable <code>em_trip_id</code>, <code>em_set_id</code>, or <code>em_catch_id</code>.</li>
+<li><code>event_category_code</code> and <code>event_type_code</code> must use the standard codes in the <a href="/em/07_potential_compliance_categories_and_events_reference_codes/">Potential Compliance Categories and Events reference table</a>.</li>
+<li>Compliance issues are reported through the structured event records; separate Yes/No summary fields are not required where the corresponding result can be derived from these records.</li>
+</ul>
+
+</blockquote>
+
+        </div>
+        <div class="hx:mt-16"></div>
+        <div class="hx:mt-16"></div>
+        
+      </main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer hx:bg-gray-100 hx:pb-[env(safe-area-inset-bottom)] hx:dark:bg-neutral-900 hx:print:bg-transparent"><div class="hextra-custom-footer hextra-max-footer-width hx:mx-auto hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400"></div><div
+      class="hextra-max-footer-width hx:mx-auto hx:flex hx:justify-center hx:py-12 hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400 hx:md:justify-start"
+    >
+      <div class="hx:flex hx:w-full hx:flex-col hx:items-center hx:sm:items-start"><div class="hx:font-semibold"><a class="hx:flex hx:text-sm hx:items-center hx:gap-1 hx:text-current" target="_blank" rel="noopener noreferrer" title="Hextra GitHub Homepage" href="https://github.com/imfing/hextra">
+    <span>Powered by Hextra<svg height=1em class="hx:inline-block hx:ltr:ml-1 hx:rtl:mr-1 hx:align-[-2.5px]" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="m 105.50024,22.224647 c -9.59169,-5.537563 -21.40871,-5.537563 -31.000093,0 L 39.054693,42.689119 C 29.463353,48.226675 23.55484,58.460531 23.55484,69.535642 v 40.928918 c 0,11.07542 5.908513,21.3092 15.499853,26.84652 l 35.445453,20.46446 c 9.591313,5.53732 21.408404,5.53732 31.000094,0 l 35.44507,-20.46446 c 9.59131,-5.53732 15.49985,-15.7711 15.49985,-26.84652 V 69.535642 c 0,-11.075111 -5.90854,-21.308967 -15.49985,-26.846523 z M 34.112797,85.737639 c -1.384445,2.397827 -1.384445,5.352099 0,7.749927 l 24.781554,42.922974 c 1.38437,2.39783 3.942853,3.87496 6.711592,3.87496 h 49.563107 c 2.76905,0 5.3273,-1.47713 6.71144,-3.87496 l 24.78194,-42.922974 c 1.38414,-2.397828 1.38414,-5.3521 0,-7.749927 L 121.88049,42.814746 c -1.38414,-2.397828 -3.94239,-3.874964 -6.71144,-3.874964 H 65.605944 c -2.768739,0 -5.327223,1.477059 -6.711592,3.874964 z" style="stroke-width:0.774993" /></svg></span>
+  </a></div></div>
+    </div></footer>
+    
+    <script defer src="/js/main.js" integrity=""></script>
+<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script><script defer src="/en.search.js" integrity=""></script>
+  </body>
+</html>

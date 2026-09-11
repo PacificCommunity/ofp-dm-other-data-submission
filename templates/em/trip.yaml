@@ -1,0 +1,292 @@
+metadata:
+  name: EM Trip
+  description: E-Monitoring trip-level data template
+  version: '1.0'
+  data_level: trip
+section:
+  title: Trip Level Data
+  intro: 'The trip-level table captures information about individual fishing trips monitored by EM systems.
+
+
+    Each row represents one EM trip and contains vessel identifiers, trip timing and locations, EM programme metadata, and
+    analysis/review attributes.'
+  notes: |
+    - `em_trip_id` must be unique within a submission. It must be constructed using the normalised vessel name followed by the trip departure date in `YYYYMMDD` format. For identifier construction, convert the vessel name to uppercase and remove all spaces and punctuation, retaining only letters and numbers.
+
+    - Percentage fields are expressed as values from 0 to 100.
+
+    - Vessel identification should be checked against the [WCPFC Record of Fishing Vessels](https://vessels.wcpfc.int/). If the UVI/IMO number or WCPFC VID is not available, vessel name, flag State registration number and IRCS should be provided to support unique vessel identification.
+
+    - Port codes should use the [Port codes reference table](/em/12_Port_codes/) where applicable.
+
+    - Refer to the [EM programme codes reference table](/em/08_EM_program_codes/) and [EM DRC codes reference table](/em/09_DRC_codes/) for standard programme and review-centre codes.
+columns:
+  em_trip_id:
+    type: str
+    mandatory: true
+    csv_required: true
+    description: Unique identifier for the EM trip. The value must be unique within the submission and must be constructed using the normalised vessel name followed by the trip departure date in YYYYMMDD format. For identifier construction, convert the vessel name to uppercase and remove all spaces and punctuation, retaining only letters and numbers.
+    format: Text
+    example: OCEANVOYAGER20250315
+  trip_analysis_method:
+    type: str
+    mandatory: false
+    description: 'Describes how the EM data for the trip were generated, particularly where AI tools are used. For example:
+      "This trip was analysed by humans only" or "This trip was analysed by humans and AI tools".'
+    format: String
+    example: This trip was analysed by humans only
+  uvi:
+    type: int
+    mandatory: false
+    description: The vessel's Unique Vessel Identifier (IMO number), where available. Refer to WCPFC [Conservation and 
+      Management Measure 
+      2013-04](https://www.wcpfc.int/doc/conservation-and-management-measure-wcpfc-implementation-unique-vessel-identifier-uvi).
+    format: Integer
+    example: 9876543
+  vessel_name:
+    type: str
+    mandatory: true
+    description: Name of the fishing vessel.
+    format: Text
+    example: OCEAN VOYAGER
+  vessel_owner_company:
+    type: str
+    mandatory: false
+    description: Name of the company or vessel owner responsible for the fishing vessel.
+    format: Text
+    example: Ocean Fishing Company Ltd
+  vessel_registration_number:
+    type: str
+    mandatory: false
+    description: Flag State registration number of the fishing vessel.
+    format: Text
+    example: FJ12345
+  flag:
+    type: str
+    mandatory: false
+    description: Flag or chartering nation of the fishing vessel.
+    format: Text
+    example: FIJI
+  ircs:
+    type: str
+    mandatory: true
+    description: International Radio Call Sign (IRCS) of the fishing vessel.
+    format: Text
+    example: 3FIJ8
+  wcpfc_vid:
+    type: int
+    mandatory: true
+    description: WCPFC vessel identification number. Refer to the [WCPFC Record of Fishing 
+      Vessels](https://vessels.wcpfc.int/).
+    format: Integer
+    example: 12345
+  trip_start_datetime:
+    type: str
+    mandatory: true
+    description: UTC date and time the vessel departs a port to start its fishing trip. If the vessel departs from a 
+      carrier vessel after an at-sea transhipment, use the UTC date and time of departure from the carrier vessel.
+    format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
+    example: '2025-03-15T06:30:00Z'
+  depart_port:
+    type: str
+    mandatory: true
+    description: Departure port code (UN/LOCODE). Use AT SEA when the trip begins at sea following a transhipment; 
+      departure coordinates must then be provided. Refer to the [Port codes reference table](/em/12_Port_codes/).
+    format: UN/LOCODE or AT SEA
+    example: FJSUV
+  trip_start_lat:
+    type: str
+    mandatory: true
+    description: Latitude of departure when the vessel starts the trip.
+    format: 'ISO 6709: signed DDMM.MMM'
+    example: '-1808.460'
+  trip_start_lon:
+    type: str
+    mandatory: true
+    description: Longitude of departure when the vessel starts the trip.
+    format: 'ISO 6709: signed DDDMM.MMM'
+    example: '+17826.460'
+  return_port:
+    type: str
+    mandatory: true
+    description: Return port code (UN/LOCODE). Use AT SEA when the trip ends at sea for a full or partial unloading; the
+      applicable receiving-vessel details and coordinates must then be provided. Refer to the [Port codes reference 
+      table](/em/12_Port_codes/).
+    format: UN/LOCODE or AT SEA
+    example: FJSUV
+  trip_end_lat:
+    type: str
+    mandatory: true
+    description: Latitude of return when the vessel ends the trip.
+    format: 'ISO 6709: signed DDMM.MMM'
+    example: '-1808.460'
+  trip_end_lon:
+    type: str
+    mandatory: true
+    description: Longitude of return when the vessel ends the trip.
+    format: 'ISO 6709: signed DDDMM.MMM'
+    example: '+17826.460'
+  receiving_vessel_name:
+    type: str
+    mandatory: false
+    csv_required: true
+    description: Name of the vessel receiving catch during an at-sea transhipment. This field is required when the start
+      or end of the trip is AT SEA.
+    format: Text; blank if not applicable
+    example: ''
+  receiving_vessel_registration_number:
+    type: str
+    mandatory: false
+    description: Flag State registration number of the receiving vessel.
+    format: Text; blank if not applicable
+    example: ''
+  receiving_vessel_flag:
+    type: str
+    mandatory: false
+    description: Flag or chartering nation of the receiving vessel.
+    format: Text; blank if not applicable
+    example: ''
+  receiving_vessel_ircs:
+    type: str
+    mandatory: false
+    description: International Radio Call Sign (IRCS) of the receiving vessel.
+    format: Text; blank if not applicable
+    example: ''
+  receiving_vessel_wcpfc_vid:
+    type: int
+    mandatory: false
+    description: WCPFC identification number of the receiving vessel. Refer to the [WCPFC Record of Fishing 
+      Vessels](https://vessels.wcpfc.int/).
+    format: Integer; blank if not applicable
+    example: ''
+  return_datetime:
+    type: str
+    mandatory: true
+    description: UTC date and time the vessel ends the fishing trip.
+    format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
+    example: '2025-04-02T14:15:00Z'
+  em_program_code:
+    type: str
+    mandatory: true
+    description: Code identifying the national or sub-regional EM programme, for example FJEM. Refer to the [EM 
+      programme codes reference table](/em/08_EM_program_codes/).
+    format: EM programme code
+    example: FJEM
+  em_drc_code:
+    type: str
+    mandatory: false
+    description: Code identifying the EM Data Review Centre where the EM records were analysed. Refer to the [EM DRC 
+      codes reference table](/em/09_DRC_codes/).
+    format: EM DRC code
+    example: FJDRC
+  analyst_names:
+    type: list
+    mandatory: true
+    description: Name(s) of the EM analyst(s) who produced EM data at the trip level. Analyst codes are assigned by 
+      SPC/OFP and can be derived from the analyst names provided.
+    format: Valid JSON array of analyst names
+    example: '["Analyst One","Analyst Two"]'
+  em_trip_analyst_codes:
+    type: list
+    mandatory: true
+    description: Code(s) for the EM analyst(s) who produced EM data at the trip level. SPC/OFP assigns these codes, and 
+      the analyst codes can be derived from the analyst names provided in analyst_names.
+    format: Valid JSON array of text codes
+    example: '["NNT"]'
+  em_review_type:
+    type: str
+    mandatory: true
+    description: Type of EM review conducted for the trip.
+    format: Text
+    example: Secondary review
+  em_trip_reviewer_codes:
+    type: list
+    mandatory: false
+    description: Code(s) for the EM Data Quality Reviewer(s) at the trip level. When one or more reviewer codes are 
+      provided, this indicates that a data quality review was conducted at the trip level.
+    format: Valid JSON array of text codes
+    example: '["RAO"]'
+  drc_em_provider_code:
+    type: str
+    mandatory: false
+    description: Code for the company providing the EM records analysis system used in the Data Review Centre.
+    format: String
+    example: SATLINK
+  drc_em_software:
+    type: str
+    mandatory: true
+    description: Software name and version of the system used to analyse the EM records.
+    format: String
+    example: Satlink View Manager version 4.0
+  science_analysis_percentage:
+    type: int
+    mandatory: false
+    description: Percentage of haul analysis undertaken for scientific monitoring. Programmes may vary analysis rates 
+      according to national procedures and rationale. 100 means entirely analysed, an intermediate value represents 
+      partial analysis, and 0 means compliance-only analysis.
+    format: Integer, 0-100
+    example: 20
+  compliance_analysis_percentage:
+    type: int
+    mandatory: false
+    description: Percentage of haul analysis undertaken for compliance monitoring. Programmes may vary analysis rates 
+      according to national procedures and rationale. 100 means entirely analysed, an intermediate value represents 
+      partial analysis, and 0 means science-only analysis.
+    format: Integer, 0-100
+    example: 20
+  trip_analysis_start_datetime:
+    type: str
+    mandatory: true
+    description: UTC date and time when analysis of the trip started.
+    format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
+    example: '2025-04-03T08:00:00Z'
+  trip_analysis_end_datetime:
+    type: str
+    mandatory: true
+    description: UTC date and time when analysis of the trip ended.
+    format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
+    example: '2025-04-04T16:30:00Z'
+  total_number_sets:
+    type: int
+    mandatory: true
+    description: Total number of sets conducted by the vessel during the trip.
+    format: Integer
+    example: 10
+  set_numbers_planned_for_analysis:
+    type: list
+    mandatory: false
+    description: List of set numbers planned for analysis. The EM programme should be able to demonstrate the protocol 
+      used to select sets, including the random-selection process.
+    format: Valid JSON array of integers
+    example: '[4,7]'
+  digital_calibration:
+    type: bool
+    mandatory: false
+    description: Indicates whether the EM analyst performed a digital calibration of the measuring tool before analysis.
+      This supports assessment of the accuracy of digital length measurements.
+    format: true / false; blank if unknown or not applicable
+    example: true
+  has_auto_bait_thrower:
+    type: bool
+    mandatory: true
+    description: Indicates whether the vessel has an automatic bait thrower.
+    format: true / false; blank if unknown or not applicable
+    example: false
+  has_auto_branchline_attacher:
+    type: bool
+    mandatory: true
+    description: Indicates whether the vessel has an automatic branchline attacher.
+    format: true / false; blank if unknown or not applicable
+    example: ''
+  is_observer_onboard:
+    type: bool
+    mandatory: true
+    description: Indicates whether the EM records show an observer onboard the vessel.
+    format: true / false; blank if unknown or not applicable
+    example: false
+  comments:
+    type: str
+    mandatory: false
+    description: General comments at the trip level about the analysis of EM records and production of EM data.
+    format: String
+    example: All sets had good camera coverage. Minor delay in analysis due to system upgrade.

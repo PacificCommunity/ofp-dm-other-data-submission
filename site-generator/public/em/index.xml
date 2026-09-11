@@ -1,0 +1,861 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OFP Data Submission – </title>
+    <link>http://localhost:1313/em/</link>
+    <description>Recent content on OFP Data Submission</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/em/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/01_species_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/01_species_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;Species codes, common names and scientific names&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;species-codes-common-names-and-scientific-names&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#species-codes-common-names-and-scientific-names&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the most commonly reported species from longline E-Monitoring:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Species code (FAO)&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Species common name&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Species scientific name&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;ABU&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;SERGEANT-MAJOR&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Abudefduf saxatilis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;ALB&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;ALBACORE&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Thunnus alalunga&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;BET&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;BIGEYE TUNA&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Thunnus obesus&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;BSH&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;BLUE SHARK&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Prionace glauca&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;YFT&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;YELLOWFIN TUNA&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Thunnus albacares&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;SKJ&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;SKIPJACK TUNA&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Katsuwonus pelamis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;SWO&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;SWORDFISH&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Xiphias gladius&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;TTX&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;ALL TURTLES&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;RMV&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;MOBULID RAYS&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;DLP&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;ALL DOLPHINS&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This file is intentionally kept simple for Hugo rendering and can be expanded with the full species lookup list later.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/02_fate_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/02_fate_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;Fate codes and descriptions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;fate-codes-and-descriptions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#fate-codes-and-descriptions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the fate codes for specimens retained or discarded:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Fate code&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;DCF&lt;/td&gt;
+					&lt;td&gt;Discarded - Line cut&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;DDL&lt;/td&gt;
+					&lt;td&gt;Discarded - Too difficult to land&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;DFR&lt;/td&gt;
+					&lt;td&gt;Discarded - Discarded trunk - Fins retained (sharks)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;DPQ&lt;/td&gt;
+					&lt;td&gt;Discarded - Poor quality&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ESC&lt;/td&gt;
+					&lt;td&gt;Fish escaped&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;RCC&lt;/td&gt;
+					&lt;td&gt;Retained - For Crew Consumption&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;RGG&lt;/td&gt;
+					&lt;td&gt;Retained - Gilled and gutted (for sale)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;RGO&lt;/td&gt;
+					&lt;td&gt;Retained - Gutted only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;RWW&lt;/td&gt;
+					&lt;td&gt;Retained - Whole&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/03_condition_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/03_condition_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;Condition codes and descriptions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;condition-codes-and-descriptions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#condition-codes-and-descriptions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the condition codes for specimens when caught and/or released:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Condition code&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;A0&lt;/td&gt;
+					&lt;td&gt;Alive but unable to describe condition&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;A1&lt;/td&gt;
+					&lt;td&gt;Alive and healthy&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;A2&lt;/td&gt;
+					&lt;td&gt;Alive, but injured or distressed&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;A3&lt;/td&gt;
+					&lt;td&gt;Alive, but unlikely to live&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;D&lt;/td&gt;
+					&lt;td&gt;Dead&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;U&lt;/td&gt;
+					&lt;td&gt;Condition, unknown&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/04_length_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/04_length_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;Length codes and descriptions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;length-codes-and-descriptions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#length-codes-and-descriptions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the length codes for specifying the type of length measurements for each specimen.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Length Code&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;UF&lt;/td&gt;
+					&lt;td&gt;Upper jaw to fork in tail&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LF&lt;/td&gt;
+					&lt;td&gt;Lower jaw to fork in tail&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TL&lt;/td&gt;
+					&lt;td&gt;Tip of snout to end of tail&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PF&lt;/td&gt;
+					&lt;td&gt;Pectoral fin to fork in tail&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;NM&lt;/td&gt;
+					&lt;td&gt;Not measured&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OW&lt;/td&gt;
+					&lt;td&gt;EM Analyst&amp;rsquo;s Estimate&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/05_gear_interaction_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/05_gear_interaction_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;Gear interaction codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;gear-interaction-codes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gear-interaction-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the gear interaction codes for species of special interest:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Gear interaction code&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;IEN&lt;/td&gt;
+					&lt;td&gt;Entangled in gear&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;IFB&lt;/td&gt;
+					&lt;td&gt;Feeding on bait during set&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;IGO&lt;/td&gt;
+					&lt;td&gt;Interacted with primary gear only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;IHD&lt;/td&gt;
+					&lt;td&gt;Hooked deeply - throat or stomach&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;IHE&lt;/td&gt;
+					&lt;td&gt;Hooked externally&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;IHI&lt;/td&gt;
+					&lt;td&gt;Hooked internally (mouth)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;IHJ&lt;/td&gt;
+					&lt;td&gt;Hooked in jaw (circle hook)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;IHU&lt;/td&gt;
+					&lt;td&gt;Hooked unknown&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/06_sex_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/06_sex_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;Sex codes and descriptions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;sex-codes-and-descriptions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#sex-codes-and-descriptions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the sex codes for specimens either retained or discarded:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Sex Code&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;F&lt;/td&gt;
+					&lt;td&gt;Female&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;I&lt;/td&gt;
+					&lt;td&gt;Indeterminate (checked but unsure)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;M&lt;/td&gt;
+					&lt;td&gt;Male&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;U&lt;/td&gt;
+					&lt;td&gt;Unknown (not checked)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/07_potential_compliance_categories_and_events_reference_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/07_potential_compliance_categories_and_events_reference_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;Potential Compliance Categories and Events Reference Codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;potential-compliance-categories-and-events-reference-codes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#potential-compliance-categories-and-events-reference-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the codes for potential compliance categories and events:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Category code&lt;/th&gt;
+					&lt;th&gt;Event code&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;P&lt;/td&gt;
+					&lt;td&gt;P1&lt;/td&gt;
+					&lt;td&gt;Discharge of oil&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;P&lt;/td&gt;
+					&lt;td&gt;P2&lt;/td&gt;
+					&lt;td&gt;Discharge of waste&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;T&lt;/td&gt;
+					&lt;td&gt;T1&lt;/td&gt;
+					&lt;td&gt;Transfer of persons&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;B&lt;/td&gt;
+					&lt;td&gt;B1&lt;/td&gt;
+					&lt;td&gt;Behavioural issue&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;C&lt;/td&gt;
+					&lt;td&gt;C1&lt;/td&gt;
+					&lt;td&gt;Illegal transfer/transport&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;L&lt;/td&gt;
+					&lt;td&gt;L1&lt;/td&gt;
+					&lt;td&gt;Bunkering activity&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;S&lt;/td&gt;
+					&lt;td&gt;S1&lt;/td&gt;
+					&lt;td&gt;SSI observed&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;G&lt;/td&gt;
+					&lt;td&gt;G1&lt;/td&gt;
+					&lt;td&gt;General compliance concern&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/08_em_program_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/08_em_program_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;EM program codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;em-program-codes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#em-program-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the EM program codes:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Country&lt;/th&gt;
+					&lt;th&gt;EM program code&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Fiji&lt;/td&gt;
+					&lt;td&gt;FJEM&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;French Polynesia&lt;/td&gt;
+					&lt;td&gt;PFEM&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;FSM&lt;/td&gt;
+					&lt;td&gt;FMEM&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Kiribati&lt;/td&gt;
+					&lt;td&gt;KIEM&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Marshall Islands&lt;/td&gt;
+					&lt;td&gt;MHEM&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Palau&lt;/td&gt;
+					&lt;td&gt;PWEM&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Solomon Islands&lt;/td&gt;
+					&lt;td&gt;SBEM&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Tonga&lt;/td&gt;
+					&lt;td&gt;TOEM&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Vanuatu&lt;/td&gt;
+					&lt;td&gt;VUEM&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;China&lt;/td&gt;
+					&lt;td&gt;CNEM&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/09_drc_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/09_drc_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;EM Data Review Center (DRC) codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;em-data-review-center-drc-codes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#em-data-review-center-drc-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the EM Data Review Center codes:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;DRC&lt;/th&gt;
+					&lt;th&gt;DRC code&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Fiji DRC&lt;/td&gt;
+					&lt;td&gt;FJDRC&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;FSM DRC&lt;/td&gt;
+					&lt;td&gt;FMDRC&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Kiribati DRC&lt;/td&gt;
+					&lt;td&gt;KIDRC&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Palau DRC&lt;/td&gt;
+					&lt;td&gt;PWDRC&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Marshall Islands DRC&lt;/td&gt;
+					&lt;td&gt;MHDRC&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Solomon Islands DRC&lt;/td&gt;
+					&lt;td&gt;SBDRC&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Tonga DRC&lt;/td&gt;
+					&lt;td&gt;TODRC&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Vanuatu DRC&lt;/td&gt;
+					&lt;td&gt;VUDRC&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Digital Observer Services DRC&lt;/td&gt;
+					&lt;td&gt;DOSDRC&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Pacific Community DRC&lt;/td&gt;
+					&lt;td&gt;SPCDRC&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/10_reason_for_not_analysing_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/10_reason_for_not_analysing_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;Reason for not analysing a set&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;reason-for-not-analysing-a-set&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#reason-for-not-analysing-a-set&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the codes for reasons for not analysing a set:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Reason&lt;/th&gt;
+					&lt;th&gt;Reason code&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Insufficient image quality from dirty lenses&lt;/td&gt;
+					&lt;td&gt;R01&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Insufficient image quality from obstructions over lenses&lt;/td&gt;
+					&lt;td&gt;R02&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;No EM records available&lt;/td&gt;
+					&lt;td&gt;R03&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Only partial EM records available&lt;/td&gt;
+					&lt;td&gt;R04&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/11_digital_measuring_method_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/11_digital_measuring_method_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;EM Digital Measuring Method Codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;em-digital-measuring-method-codes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#em-digital-measuring-method-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the digital measuring method codes:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Method and description&lt;/th&gt;
+					&lt;th&gt;Code&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;EM analyst using a calibrated measuring tool to produce a digital length measurement&lt;/td&gt;
+					&lt;td&gt;M1&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;EM analyst using a reference length to produce a visual estimate&lt;/td&gt;
+					&lt;td&gt;M2&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Artificial intelligence tool to produce digital length measurement&lt;/td&gt;
+					&lt;td&gt;M3&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/12_port_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/12_port_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;EM Port codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;em-port-codes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#em-port-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the port codes (UN/LOCODE) for the most common ports in the WCPO:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Location code&lt;/th&gt;
+					&lt;th&gt;Port name&lt;/th&gt;
+					&lt;th&gt;Country code&lt;/th&gt;
+					&lt;th&gt;Country name&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;FJSUV&lt;/td&gt;
+					&lt;td&gt;SUVA&lt;/td&gt;
+					&lt;td&gt;FJ&lt;/td&gt;
+					&lt;td&gt;Fiji&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;FJLTK&lt;/td&gt;
+					&lt;td&gt;Lautoka&lt;/td&gt;
+					&lt;td&gt;FJ&lt;/td&gt;
+					&lt;td&gt;Fiji&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;FMYAP&lt;/td&gt;
+					&lt;td&gt;YAP&lt;/td&gt;
+					&lt;td&gt;FM&lt;/td&gt;
+					&lt;td&gt;Federated States of Micronesia&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;FMPNI&lt;/td&gt;
+					&lt;td&gt;POHNPEI&lt;/td&gt;
+					&lt;td&gt;FM&lt;/td&gt;
+					&lt;td&gt;Federated States of Micronesia&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MHMAJ&lt;/td&gt;
+					&lt;td&gt;MAJURO&lt;/td&gt;
+					&lt;td&gt;MH&lt;/td&gt;
+					&lt;td&gt;Marshall Islands&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PFPPT&lt;/td&gt;
+					&lt;td&gt;PAPEETE&lt;/td&gt;
+					&lt;td&gt;PF&lt;/td&gt;
+					&lt;td&gt;French Polynesia&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PGGUR&lt;/td&gt;
+					&lt;td&gt;Alotau&lt;/td&gt;
+					&lt;td&gt;PG&lt;/td&gt;
+					&lt;td&gt;Papua New Guinea&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;KRPUS&lt;/td&gt;
+					&lt;td&gt;BUSAN&lt;/td&gt;
+					&lt;td&gt;KR&lt;/td&gt;
+					&lt;td&gt;Korea, Republic of&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;JPYOS&lt;/td&gt;
+					&lt;td&gt;Yokosuka&lt;/td&gt;
+					&lt;td&gt;JP&lt;/td&gt;
+					&lt;td&gt;Japan&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CNSHA&lt;/td&gt;
+					&lt;td&gt;SHANGHAI&lt;/td&gt;
+					&lt;td&gt;CN&lt;/td&gt;
+					&lt;td&gt;China&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/13_weight_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/13_weight_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;EM Weight codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;em-weight-codes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#em-weight-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the weight codes:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Weight code&lt;/th&gt;
+					&lt;th&gt;Weight description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GG&lt;/td&gt;
+					&lt;td&gt;Gilled and gutted&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GH&lt;/td&gt;
+					&lt;td&gt;Gutted, headed&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GO&lt;/td&gt;
+					&lt;td&gt;Gutted only, not gilled&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GT&lt;/td&gt;
+					&lt;td&gt;Gilled, gutted, tailed&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GX&lt;/td&gt;
+					&lt;td&gt;Gutted, headed, tailed&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;WW&lt;/td&gt;
+					&lt;td&gt;Whole weight&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/14_weighing_method_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/14_weighing_method_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;Weighing method codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;weighing-method-codes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#weighing-method-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the weighing method codes:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Weighing method code&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;W1&lt;/td&gt;
+					&lt;td&gt;No measuring device used (estimate only)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;W2&lt;/td&gt;
+					&lt;td&gt;Measuring device used (scale)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/em/15_ssis_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/em/15_ssis_codes/</guid>
+      <description>
+        
+        
+        &lt;h4&gt;Species of Special Interest (SSIs) codes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;species-of-special-interest-ssis-codes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#species-of-special-interest-ssis-codes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;These are the Species of Special Interest codes.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Species code (FAO)&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Species common name&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Species scientific name&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;TTX&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;ALL TURTLES&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;RMV&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;MOBULID RAYS&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;DLP&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;ALL DOLPHINS&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;ODN&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;ALL TOOTHED WHALES&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;WHA&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;WHALES&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;OCS&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;OCEANIC WHITETIP SHARK&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Carcharhinus longimanus&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;FAL&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;SILKY SHARK&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Carcharhinus falciformis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;RHN&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;SHORTFIN MAKO&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Isurus oxyrinchus&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

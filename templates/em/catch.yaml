@@ -1,0 +1,226 @@
+metadata:
+  name: EM Longline Catch
+  description: EM Longline catch-level CSV template aligned to the JSON standard
+  version: '1.0'
+  data_level: catch
+section:
+  title: Catch Level Data
+  intro: 'The catch-level table captures information about individual catch events identified during EM analysis.
+
+
+    Each row represents one catch event and contains the parent trip and set identifiers, catch identifiers, analysis/review
+    attributes, species and fate information, measurements, catch position, and Species of Special Interest interaction information.'
+  notes: |
+    - `em_trip_id` and `em_set_id` must exactly match the corresponding identifiers in the Trip and Set CSV files submitted in the same dataset.
+
+    - `em_catch_id` must be unique within the submission. It must be constructed using the parent `em_set_id`, followed by `C` and a four-digit sequential catch number within the set, for example `C0001`. The catch sequence restarts for each set.
+
+    - `catch_datetime`, `catch_lat`, and `catch_lon` are not mandatory for all catch records. However, for Species of Special Interest (SSI) interactions, the interaction date and time, latitude, and longitude are mandatory WCPFC EM data fields and must be provided.
+columns:
+  em_trip_id:
+    type: str
+    mandatory: false
+    csv_required: true
+    description: Identifier of the parent EM trip. The value must exactly match an em_trip_id in the Trip CSV submitted 
+      in the same dataset.
+    format: Text
+    example: OCEANVOYAGER20250315
+    csv_only: true
+  em_set_id:
+    type: str
+    mandatory: false
+    csv_required: true
+    description: Identifier of the parent EM set. The value must exactly match an em_set_id in the Set CSV submitted in 
+      the same dataset.
+    format: Text
+    example: OCEANVOYAGER2025031520250316194500
+    csv_only: true
+  em_catch_id:
+    type: str
+    mandatory: false
+    csv_required: true
+    description: Unique identifier for the catch event. The identifier must be constructed using the parent em_set_id followed by C and a four-digit sequential catch number within the set.
+    format: Text
+    example: OCEANVOYAGER2025031520250316194500C0001
+  catch_analysis_method:
+    type: str
+    mandatory: false
+    description: 'Describes how the EM data for the catch were generated, particularly where AI tools are used. For example:
+      "This catch was analysed by humans only" or "This catch was analysed by humans and AI tools".'
+    format: Text
+    example: This catch was analysed by humans only
+  em_catch_analyst_codes:
+    type: list
+    mandatory: false
+    description: Code(s) for the EM analyst(s) who produced EM data at the catch level.
+    format: Valid JSON array of text codes
+    example: '["NNT"]'
+  em_catch_reviewer_codes:
+    type: list
+    mandatory: false
+    description: Code(s) for the EM Data Quality Reviewer(s) at the catch level. When one or more reviewer codes are 
+      provided, this indicates that a data quality review was conducted at the catch level.
+    format: Valid JSON array of text codes
+    example: '["RAO"]'
+  snap_datetime:
+    type: str
+    mandatory: false
+    description: UTC date and time, to the nearest second, when the branchline snap for the catch event is removed from 
+      the mainline.
+    format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
+    example: '2025-03-17T08:42:00Z'
+  catch_datetime:
+    type: str
+    mandatory: false
+    csv_required: true
+    description: UTC date and time, to the nearest second, of the catch event as recorded by the EM equipment.
+    format: 'ISO 8601 UTC: YYYY-MM-DDTHH:MM:SSZ'
+    example: '2025-03-17T08:42:00Z'
+  camera_id:
+    type: str
+    mandatory: false
+    description: Identifier of the EM camera that recorded the catch event.
+    format: Text
+    example: CAM01
+  hook_no:
+    type: int
+    mandatory: true
+    description: Hook number between successive floats on which the catch was caught.
+    format: Integer
+    example: 12
+  species_code:
+    type: str
+    mandatory: true
+    description: FAO ASFIS 3-character code for the species identified from the catch event. Refer to the [Species codes
+      reference table](/em/01_Species_codes/) and the [FAO ASFIS species 
+      list](https://www.fao.org/fishery/en/collection/asfis/en).
+    format: FAO ASFIS 3-character species code
+    example: YFT
+  fate_code:
+    type: str
+    mandatory: true
+    description: Regional fate code indicating whether and how the catch was retained, discarded, or escaped. Refer to 
+      the [Fate codes reference table](/em/02_Fate_codes/).
+    format: Regional fate code
+    example: RGG
+  condition_code:
+    type: str
+    mandatory: true
+    description: Regional code describing the condition of the catch when caught. Refer to the [Condition codes 
+      reference table](/em/03_Condition_codes/).
+    format: Regional condition code
+    example: A1
+  condition_release_code:
+    type: str
+    mandatory: true
+    description: Regional code describing the condition of the catch when released or discarded. Leave blank when the 
+      catch is retained. Refer to the [Condition codes reference table](/em/03_Condition_codes/).
+    format: Regional condition code; blank if not applicable
+    example: ''
+  digital_measuring_method:
+    type: str
+    mandatory: false
+    description: Code for the digital measuring method used to produce the specimen length. Refer to the [Digital 
+      measuring method codes reference table](/em/11_Digital_measuring_method_codes/).
+    format: Digital measuring method code
+    example: M1
+  is_footage_quality_sufficient:
+    type: bool
+    mandatory: false
+    description: Indicates whether footage quality is sufficient for the specimen to be measured precisely and 
+      identified with confidence.
+    format: true / false; blank if unknown or not applicable
+    example: true
+  is_fish_in_calibration_area:
+    type: bool
+    mandatory: false
+    description: Indicates whether the measured specimen is positioned within the calibration area on deck.
+    format: true / false; blank if unknown or not applicable
+    example: true
+  is_length_accurate:
+    type: bool
+    mandatory: false
+    description: Indicates whether the digital length measurement is considered accurate. For a measurement to be 
+      accurate, digital calibration, sufficient footage quality, and placement within the calibration area must all be 
+      true. If digital_measuring_method is M2, this value must be false.
+    format: true / false; blank if unknown or not applicable
+    example: true
+  length_code:
+    type: str
+    mandatory: true
+    description: Regional code identifying the type of length measurement. If digital_measuring_method is M1, 
+      length_code cannot be OW; if digital_measuring_method is M2, length_code must be OW. Refer to the [Length codes 
+      reference table](/em/04_Length_codes/).
+    format: Regional length code
+    example: UF
+  length:
+    type: float
+    mandatory: true
+    description: Digital length measurement of the specimen in centimetres, to a maximum of one decimal place. Refer to 
+      pages 77–79 of the [Longline Observer 
+      Guide](https://www.spc.int/DigitalLibrary/Doc/FAME/Manuals/Longline_Observer_Guide_2021.html) for regional 
+      length-measurement protocols.
+    format: Decimal number (cm), max 1 decimal place
+    example: 122.5
+  sex_code:
+    type: str
+    mandatory: true
+    description: Regional code for the sex of the catch, where it can be determined. Refer to the [Sex codes reference 
+      table](/em/06_Sex_codes/).
+    format: Regional sex code
+    example: U
+  catch_weight_vessel:
+    type: float
+    mandatory: false
+    description: Weight of the specimen in kilograms, to the nearest decimal, as measured by the vessel crew.
+    format: Decimal number (kg), max 1 decimal place
+    example: 35.0
+  catch_weight_code:
+    type: str
+    mandatory: false
+    description: Regional code describing the weight recorded for the specimen. Refer to the [Weight codes reference 
+      table](/em/13_Weight_codes/).
+    format: Regional weight code
+    example: WW
+  weighing_method:
+    type: str
+    mandatory: false
+    description: Code for the method used to produce catch_weight_vessel. Refer to the [Weighing method codes reference 
+      table](/em/14_Weighing_method_codes/).
+    format: Regional weighing method code
+    example: W1
+  catch_lat:
+    type: str
+    mandatory: false
+    csv_required: true
+    description: Latitude at the time of the catch event.
+    format: 'ISO 6709: signed DDMM.MMM'
+    example: '-1708.460'
+  catch_lon:
+    type: str
+    mandatory: false
+    csv_required: true
+    description: Longitude at the time of the catch event.
+    format: 'ISO 6709: signed DDDMM.MMM'
+    example: '+17826.460'
+  ssi_gear_interaction_code:
+    type: str
+    mandatory: true
+    description: Regional gear-interaction code for Species of Special Interest (SSI). Refer to the [Gear interaction 
+      codes reference table](/em/05_Gear_interaction_codes/) and [SSI codes reference table](/em/15_SSIS_codes/). 
+      Additional guidance on SSI vessel interactions is provided on pages 97–98 of the [Longline Observer 
+      Guide](https://www.spc.int/DigitalLibrary/Doc/FAME/Manuals/Longline_Observer_Guide_2021.html).
+    format: SSI gear interaction code; blank if not applicable
+    example: IHI
+  tag_recovery_note:
+    type: str
+    mandatory: false
+    description: Text note recording tag recovery information for the catch event, where applicable.
+    format: Text
+    example: Tag recovered and details recorded.
+  ema_comments:
+    type: str
+    mandatory: false
+    description: Comments from the EM analyst about the catch event.
+    format: Text
+    example: Fish measured on deck; tail partially obscured but species confirmed by reviewer.
